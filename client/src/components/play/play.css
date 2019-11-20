@@ -90,6 +90,11 @@
   font-size: 20px;
   line-height: 0;
   margin: 0 10px;
+  transition: color .3s;
+}
+
+.control:hover{
+  color: #815fdd;
 }
 
 .control-play{
@@ -144,6 +149,11 @@
   opacity: 1;
 }
 
+.media-play-list-pop .play-list-item .media-play-detail{
+  height: 50px;
+}
+
+
 .play-list-item{
   padding-left: 0;
   color: #000;
@@ -176,6 +186,11 @@
   cursor: pointer;
   padding: 0 25px;
   transition: background-color .2s, color .2s;
+  border-bottom: 1px solid rgba(129, 95, 221, .3);
+}
+
+.play-list-item li:last-child{
+  border-bottom: none;
 }
 
 .play-list-item li:hover{

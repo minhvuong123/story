@@ -1,9 +1,7 @@
 .col-story-link{
   position: relative;
   width: 180px;
-  height: 180px;
   border-radius: 3px;
-  background-color: #e9ecef;
   cursor: pointer;
 }
 

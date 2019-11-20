@@ -20,8 +20,6 @@ class PlayList extends Component {
   
   render() {
     const { listStatus } = this.state;
-    console.log(listStatus);
-    
     return (
       <div className="col-2 col-sm-3 pr-0">
         <div className="media-play-list-wrap">
