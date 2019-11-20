@@ -2,6 +2,23 @@ import React, { Component } from 'react'
 import moment from 'moment';
 
 class PlayDetail extends Component {
+  constructor(props) {
+    super(props);
+    this.refProgress = React.createRef();
+  }
+  
+
+  componentDidMount(){
+    this.refProgress.current.addEventListener('click', this.handleProgress)
+  }
+
+  handleProgress = (e) => {
+    const { player, duration, currentTimeAudio } = this.props;
+    const progress = (e.offsetX / this.refProgress.current.getBoundingClientRect().width) * duration;
+    player.current.currentTime = progress;
+    currentTimeAudio(progress);
+  }
+
   render() {
     const { duration, currentTime } = this.props;    
     const parseCurrentTime = moment.utc(moment.duration(currentTime,"seconds").asMilliseconds()).format("HH:mm:ss");
@@ -25,7 +42,7 @@ class PlayDetail extends Component {
                 <span className="time-duration">{parseDuration}</span>
               </div>
             </div>
-            <div className="song-player-time">
+            <div className="song-player-time" ref={this.refProgress}>
               <div className="player-time-fill" style={{width: progressLength}} />
               <div className="player-time-buffer" style={{left: progressLength}} />
             </div>

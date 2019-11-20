@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { FaRegPlayCircle, FaRegPauseCircle } from 'react-icons/fa';
+import { FaRegPlayCircle } from 'react-icons/fa';
 
 import "./story.css"
 

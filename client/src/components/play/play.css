@@ -62,6 +62,7 @@
   background-color: #a0a0a0;
   margin-top: 5px;
   position: relative;
+  cursor: pointer;
 }
 
 .song-player-time .player-time-fill{
@@ -71,7 +72,7 @@
   background-color: #815fdd;
   width: 0;
   height: inherit;
-  transition: .3s;
+  transition: width .3s;
 }
 
 .song-player-time .player-time-buffer{
@@ -83,6 +84,7 @@
   height: 10px;
   background-color: #815fdd;
   border-radius: 50%;
+  transition: left .3s;
 }
 
 .control {
