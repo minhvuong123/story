@@ -63,6 +63,11 @@
   margin-top: 5px;
   position: relative;
   cursor: pointer;
+  transition: height .1s;
+}
+
+.media-play-detail .song-wrap .song-player-time:hover{
+  height: 5px;
 }
 
 .song-player-time .player-time-fill{
@@ -72,20 +77,25 @@
   background-color: #815fdd;
   width: 0;
   height: inherit;
-  transition: width .3s;
 }
 
-.song-player-time .player-time-buffer{
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 10px;
+.song-player-time .player-time-fill:before{
+  position: inherit;
+  content: "";
+  right: 0;
+  top: 0;
   height: 10px;
-  background-color: #815fdd;
+  width: 10px;
+  transform: translateY(-25%);
   border-radius: 50%;
-  transition: left .3s;
+  background-color: #815fdd;
+  display: none;
 }
+ 
+.song-player-time:hover .player-time-fill:before{
+  display: inline-block;
+}
+
 
 .control {
   cursor: pointer;
