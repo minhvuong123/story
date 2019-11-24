@@ -15,7 +15,6 @@ class PlayDetail extends Component {
       statusProgress: false,
       statusVolume: false,
       statusSpeed: false,
-      statusSpeed: false,
       volumeShow: false,
     }
     this.refProgress = React.createRef();
@@ -68,8 +67,6 @@ class PlayDetail extends Component {
         getVolume(100);
       } else {
         player.current.volume = parseFloat(100 - progress) / 100;
-        console.log(player.current.volume);
-        
         getVolume(progress);
       }
     }
@@ -92,7 +89,7 @@ class PlayDetail extends Component {
 
   setProgress = (e) => {
     const { statusProgress } = this.state;
-    const { player, duration, currentTimeAudio } = this.props;
+    const { player, duration, currentTimeAudio, changePlay } = this.props;
     if(statusProgress){
       const progress = (e.nativeEvent.offsetX / this.refProgress.current.getBoundingClientRect().width) * duration;
       player.current.currentTime = progress > duration ? duration : progress;

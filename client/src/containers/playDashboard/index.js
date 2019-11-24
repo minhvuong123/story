@@ -58,6 +58,7 @@ class PlayDashBoard extends Component {
           play={play} 
           duration={duration} 
           currentTime={currentTime}
+          changePlay={changePlay}
           playAudio={this.playAudio} 
           durationAudio={durationAudio}
           currentTimeAudio={currentTimeAudio}

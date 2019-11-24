@@ -14,7 +14,8 @@ class Play extends Component {
       volume, 
       getVolume, 
       duration, 
-      currentTime, 
+      currentTime,
+      changePlay,
       playAudio, 
       durationAudio, 
       currentTimeAudio 
@@ -24,8 +25,10 @@ class Play extends Component {
         <div className="container pl-0 pr-0">
           <div className="row align-items-center">
             <PlayControl 
+              player={player} 
               play={play} 
               currentTime={currentTime} 
+              duration={duration}
               playAudio={playAudio} 
               durationAudio={durationAudio} 
               currentTimeAudio={currentTimeAudio}/>
@@ -33,7 +36,8 @@ class Play extends Component {
               player={player} 
               duration={duration} 
               currentTime={currentTime} 
-              currentTimeAudio = {currentTimeAudio}
+              changePlay={changePlay}
+              currentTimeAudio={currentTimeAudio}
               volume={volume}
               getVolume={getVolume}/>
             <PlayList />

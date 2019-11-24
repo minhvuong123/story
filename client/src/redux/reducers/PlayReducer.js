@@ -14,6 +14,8 @@ const initState = {
 const playReducer = (state = initState, action) => {
   switch(action.type){
     case CHANGE_PLAY:
+      console.log("abc");
+      
       return {...state, play: !state.play}
     case DURATION_AUDIO:
       return {...state, duration: action.duration}
