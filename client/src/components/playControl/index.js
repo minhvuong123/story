@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
-import { IoIosSkipBackward, IoIosSkipForward, IoIosShuffle, IoMdRepeat } from "react-icons/io";
+import { 
+  IoIosSkipBackward, 
+  IoIosSkipForward, 
+  IoIosShuffle, 
+  IoMdRepeat,
+} from "react-icons/io";
 import { FaRegPlayCircle, FaRegPauseCircle } from 'react-icons/fa';
 
 class PlayControl extends Component {

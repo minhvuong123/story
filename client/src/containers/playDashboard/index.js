@@ -3,7 +3,11 @@ import { connect } from 'react-redux'
 import Play from '../../components/play'
 
 // actions
-import { changePlay, durationAudio, currentTimeAudio } from '../../redux/actions';
+import { 
+  changePlay, 
+  durationAudio, 
+  currentTimeAudio,
+  getVolume } from '../../redux/actions';
 
 class PlayDashBoard extends Component {
   constructor(props) {
@@ -36,10 +40,19 @@ class PlayDashBoard extends Component {
   }
   
   render() {
-    const { play, duration, currentTime, durationAudio, currentTimeAudio } = this.props;
+    const { 
+      play, 
+      volume, 
+      getVolume, 
+      duration, 
+      currentTime, 
+      durationAudio, 
+      currentTimeAudio 
+    } = this.props;
     return (
       <Fragment>
-        <audio id="player" ref={this.refAudio} src="https://ia803002.us.archive.org/21/items/DauLaDaiLuc2TH/40_Ch%C6%B0%C6%A1ng%201141-1160%20Dau%20La%20Dai%20Luc%202.mp3" type="audio/mp3" />
+        {/* <audio id="player" ref={this.refAudio} src="https://ia803002.us.archive.org/21/items/DauLaDaiLuc2TH/40_Ch%C6%B0%C6%A1ng%201141-1160%20Dau%20La%20Dai%20Luc%202.mp3" type="audio/mp3" /> */}
+        <audio id="player" ref={this.refAudio} src="https://mp3-320s1-zmp3.zadn.vn/557c9c9006d4ef8ab6c5/4824203005250266339?authen=exp=1574695124~acl=/557c9c9006d4ef8ab6c5/*~hmac=e49fb2a7fc1245bd169be2dd12bbffc1" type="audio/mp3" />
         <Play 
           player={this.refAudio}
           play={play} 
@@ -48,6 +61,8 @@ class PlayDashBoard extends Component {
           playAudio={this.playAudio} 
           durationAudio={durationAudio}
           currentTimeAudio={currentTimeAudio}
+          volume={volume}
+          getVolume={getVolume}
         />
       </Fragment>
     )
@@ -57,13 +72,15 @@ class PlayDashBoard extends Component {
 const mapStateToProps = (state) => ({
   play: state.playReducer.play,
   duration: state.playReducer.duration,
-  currentTime: state.playReducer.currentTime
+  currentTime: state.playReducer.currentTime,
+  volume: state.playReducer.volume,
 })
 
 const mapDispatchToProps = (dispatch) => ({
   changePlay: () => dispatch(changePlay()),
   durationAudio: value => dispatch(durationAudio(value)),
   currentTimeAudio: value => dispatch(currentTimeAudio(value)),
+  getVolume: value => dispatch(getVolume(value)),
 })
 
 export default connect(

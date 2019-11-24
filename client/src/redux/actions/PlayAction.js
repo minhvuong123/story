@@ -1,7 +1,7 @@
 export const CHANGE_PLAY = 'CHANGE_PLAY';
 export const DURATION_AUDIO = 'DURATION_AUDIO';
 export const CURRENT_TIME_AUDIO = 'CURRENT_TIME_AUDIO';
-
+export const VOLUME = 'VOLUME';
 
 export const changePlay = () => {
   return {
@@ -20,5 +20,12 @@ export const currentTimeAudio = (currentTime) => {
   return {
     type: CURRENT_TIME_AUDIO,
     currentTime
+  }
+}
+
+export const getVolume = (volume) => {
+  return {
+    type: VOLUME,
+    volume
   }
 }
