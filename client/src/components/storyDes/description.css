@@ -1,0 +1,90 @@
+.nav-tabs .nav-link{
+  color: #000;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active{
+  color: #65509e !important;
+}
+
+.tab-content{
+  font-size: 14px;
+}
+
+.chapter-item{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 5px;
+  margin: 2px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.chapter-item:before{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background-color: #815fdd;
+  content: "";
+  transition: 0.35s;
+}
+.chapter-item:hover:before{
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.chapter-item a{
+  color: #7656cf;
+}
+
+.chapter-item a:hover{
+  text-decoration: none;
+  color: #65509e;
+}
+
+.pagination .page-item{
+  margin: 0 3px;
+}
+
+.pagination .page-item .page-link{
+  padding: 0.3rem .7rem;
+  cursor: pointer;
+  color: #7656cf;
+}
+
+.pagination .page-item.active .page-link{
+  background-color: #65509e;
+  border-color: #65509e;
+}
+
+.pagination .page-item .page-link:focus{
+  box-shadow: none;
+  outline: none;
+}
+
+.pagination .break-me{
+  border: 1px solid #dee2e6;
+}
+
+.pagination .break-me:focus{
+  outline: none;
+}
+
+.pagination .break-me a{
+  color: #7656cf;
+  padding: 0.3rem .7rem;
+}
+
+.pagination .break-me a:hover{
+  text-decoration: none;
+}
+
+.disabled{
+  pointer-events: none;
+  cursor: not-allowed;
+}

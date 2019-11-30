@@ -52,7 +52,7 @@ class PlayDashBoard extends Component {
     return (
       <Fragment>
         {/* <audio id="player" ref={this.refAudio} src="https://ia803002.us.archive.org/21/items/DauLaDaiLuc2TH/40_Ch%C6%B0%C6%A1ng%201141-1160%20Dau%20La%20Dai%20Luc%202.mp3" type="audio/mp3" /> */}
-        <audio id="player" ref={this.refAudio} src="https://mp3-320s1-zmp3.zadn.vn/557c9c9006d4ef8ab6c5/4824203005250266339?authen=exp=1574695124~acl=/557c9c9006d4ef8ab6c5/*~hmac=e49fb2a7fc1245bd169be2dd12bbffc1" type="audio/mp3" />
+        <audio id="player" ref={this.refAudio} src="https://mp3-320s1-zmp3.zadn.vn/6d2f4d0174469d18c457/4163716586541612268?authen=exp=1575269852~acl=/6d2f4d0174469d18c457/*~hmac=0e8a281cc818b432c28d95652b8a5469" type="audio/mp3" />
         <Play 
           player={this.refAudio}
           play={play} 

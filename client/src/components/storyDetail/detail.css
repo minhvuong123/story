@@ -1,6 +1,7 @@
 .story-thumb{
   height: 280px;
   background-color: #dfdfdf;
+  border-radius: 3px;
 }
 
 .story-title{

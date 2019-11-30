@@ -8,7 +8,7 @@ class Main extends Component {
   render() {
     return (
       <div className="main">
-        <div className="container">
+        <div className="container pb-5 mb-5">
           {/* <StorySlide />
           <StoryDashBoard width="20%"/> */}
           <StoryDetail />
