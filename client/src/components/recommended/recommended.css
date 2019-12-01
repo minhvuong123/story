@@ -7,6 +7,18 @@
   color: #65509e;
 }
 
+.recommend-slide .carousel .carousel-inner .carousel-item .title{
+  color: #65509e;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0;
+  display: inline-block;
+  width: 100%;
+}
+.recommend-slide .carousel .carousel-inner .carousel-item .title:hover{
+  text-decoration: none;
+}
+
 .recomended h4{
   color: #65509e;
 }
@@ -17,7 +29,7 @@
 
 .list-group-item{
   border: none !important;
-  border-bottom: 2px dashed #eee !important;
+  border-bottom: 1px dashed #eee !important;
 }
 
 .content{

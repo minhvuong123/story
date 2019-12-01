@@ -21,7 +21,7 @@ class Recommended extends Component {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img className="d-block w-100" src="https://truyenaudiocv.com/uploads/manga/linh-vu-thien-ha/cover/cover_250x350.jpg" alt="First slide" />
-                <p>Linh vũ thiên hạ</p>
+                <a href="#" className="title">Linh vũ thiên hạ</a>
                 <p>Nhóm dịch: Sói Già
                   Đả tự: Bựa Thập Ngũ BLH
                   Lục Thiếu Du, linh hồn bị xuyên qua đến thế giới khác, nhập vào thân thể củ...
@@ -29,13 +29,13 @@ class Recommended extends Component {
               </div>
               <div className="carousel-item ">
                 <img className="d-block w-100" src="https://truyenaudiocv.com/uploads/manga/cuc-pham-tien-de-tai-do-thi/cover/cover_250x350.jpg" alt="Second slide" />
-                <p>Vũ Thần Chúa Tể</p>
+                <a href="#" className="title">Vũ Thần Chúa Tể</a>
                 <p>Thiên Vũ Đại Lục một đại truyền kỳ Tần Trần , bởi vì bạn chí cốt phản bội ngoài ý muốn ngã xuống Vũ Vực . Ba tră...
                   </p>
               </div>
               <div className="carousel-item ">
                 <img className="d-block w-100" src="https://truyenaudiocv.com/uploads/manga/vu-than-chua-te/cover/cover_250x350.jpg" alt="Third slide" />
-                <p>Độc tôn tam giới</p>
+                <a href="#" className="title">Độc tôn tam giới</a>
                 <p>Cửu Kiếp Tiên Đế, đô thị trọng sinh!Một địa cầu, một cái Tiên giới, đây chính là thiên địa cách biệt a!“Kinh Nguyệt Đan, chuyê...
                   </p>
               </div>
@@ -45,7 +45,7 @@ class Recommended extends Component {
         <div className="col-sm-4 recomended">
           <h4>Đề cử tháng</h4>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item p-0">
+            <li className="list-group-item mb-0 p-0">
               <div className="content d-flex">
                 <div className="index start-1 p-2">
                   <IoIosStar />
@@ -73,7 +73,7 @@ class Recommended extends Component {
                 </div>
               </div>
             </li>
-            <li className="list-group-item p-0">
+            <li className="list-group-item mb-0 p-0">
               <div className="content d-flex">
                 <div className="index start-2 p-2">
                   <IoIosStar />
@@ -84,7 +84,7 @@ class Recommended extends Component {
                 </div>
               </div>
             </li>
-            <li className="list-group-item p-0">
+            <li className="list-group-item mb-0 p-0">
               <div className="content d-flex">
                 <div className="index start-3 p-2">
                   <IoIosStar />
@@ -95,7 +95,7 @@ class Recommended extends Component {
                 </div>
               </div>
             </li>
-            <li className="list-group-item p-0">
+            <li className="list-group-item mb-0 p-0">
               <div className="content d-flex">
                 <div className="index start p-2">4</div>
                 <div className="info pl-5 flex-grow-1 d-flex">
@@ -104,7 +104,7 @@ class Recommended extends Component {
                 </div>
               </div>
             </li>
-            <li className="list-group-item p-0">
+            <li className="list-group-item mb-0 p-0">
               <div className="content d-flex">
                 <div className="index start p-2">5</div>
                 <div className="info pl-5 flex-grow-1 d-flex">
@@ -113,7 +113,7 @@ class Recommended extends Component {
                 </div>
               </div>
             </li>
-            <li className="list-group-item p-0">
+            <li className="list-group-item mb-0 p-0">
               <div className="content d-flex">
                 <div className="index start p-2">6</div>
                 <div className="info pl-5 flex-grow-1 d-flex">
@@ -122,7 +122,7 @@ class Recommended extends Component {
                 </div>
               </div>
             </li>
-            <li className="list-group-item p-0">
+            <li className="list-group-item mb-0 p-0">
               <div className="content d-flex">
                 <div className="index start p-2">7</div>
                 <div className="info pl-5 flex-grow-1 d-flex">
@@ -131,7 +131,7 @@ class Recommended extends Component {
                 </div>
               </div>
             </li>
-            <li className="list-group-item p-0">
+            <li className="list-group-item mb-0 p-0">
               <div className="content d-flex">
                 <div className="index start p-2">8</div>
                 <div className="info pl-5 flex-grow-1 d-flex">
@@ -140,7 +140,7 @@ class Recommended extends Component {
                 </div>
               </div>
             </li>
-            <li className="list-group-item p-0">
+            <li className="list-group-item mb-0 p-0">
               <div className="content d-flex">
                 <div className="index start p-2">9</div>
                 <div className="info pl-5 flex-grow-1 d-flex">
@@ -149,7 +149,7 @@ class Recommended extends Component {
                 </div>
               </div>
             </li>
-            <li className="list-group-item p-0">
+            <li className="list-group-item mb-0 p-0">
               <div className="content d-flex">
                 <div className="index start p-2">10</div>
                 <div className="info pl-5 flex-grow-1 d-flex">
@@ -163,7 +163,7 @@ class Recommended extends Component {
         <div className="col-sm-4 access">
           <h4 className="mb-3">Truy cập nhiều</h4>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">
+            <li className="list-group-item mb-0">
               <div className="item">
                 <h4 class="title mb-0">
                   <a href="https://truyenaudiocv.com/than-dao-dan-ton" title="Thần Đạo Đan Tôn">Thần Đạo Đan Tôn</a>
@@ -174,7 +174,7 @@ class Recommended extends Component {
                 </div>
               </div>
             </li>
-            <li className="list-group-item">
+            <li className="list-group-item mb-0">
               <div className="item">
                 <h4 class="title mb-0">
                   <a href="https://truyenaudiocv.com/than-dao-dan-ton" title="Thần Đạo Đan Tôn">Siêu Thần Yêu Nghiệt</a>
@@ -185,7 +185,7 @@ class Recommended extends Component {
                 </div>
               </div>
             </li>
-            <li className="list-group-item">
+            <li className="list-group-item mb-0">
               <div className="item">
                 <h4 class="title mb-0">
                   <a href="https://truyenaudiocv.com/than-dao-dan-ton" title="Thần Đạo Đan Tôn">Vạn Vực Linh Thần</a>
@@ -196,7 +196,7 @@ class Recommended extends Component {
                 </div>
               </div>
             </li>
-            <li className="list-group-item">
+            <li className="list-group-item mb-0">
               <div className="item">
                 <h4 class="title mb-0">
                   <a href="https://truyenaudiocv.com/than-dao-dan-ton" title="Thần Đạo Đan Tôn">Đế bá</a>
@@ -207,7 +207,7 @@ class Recommended extends Component {
                 </div>
               </div>
             </li>
-            <li className="list-group-item">
+            <li className="list-group-item mb-0">
               <div className="item">
                 <h4 class="title mb-0">
                   <a href="https://truyenaudiocv.com/than-dao-dan-ton" title="Thần Đạo Đan Tôn">Yêu Long Cổ Đế</a>
@@ -218,7 +218,7 @@ class Recommended extends Component {
                 </div>
               </div>
             </li>
-            <li className="list-group-item">
+            <li className="list-group-item mb-0">
               <div className="item">
                 <h4 class="title mb-0">
                   <a href="https://truyenaudiocv.com/than-dao-dan-ton" title="Thần Đạo Đan Tôn">Vô Tận Đan Điền</a>

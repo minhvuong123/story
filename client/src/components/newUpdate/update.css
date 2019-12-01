@@ -1,0 +1,68 @@
+.new-update .title{
+  color: #65509e;
+}
+.new-update .content .thumb{
+  min-width: 30px;
+  min-height: 30px;
+  width: 30px;
+  display: inline-block
+}
+
+.new-update .content .thumb img{
+  width: 100%;
+  height: 100%;
+}
+
+.new-update .content .info{
+  font-size: 14px;
+  display: flex;
+  flex-grow: 1;
+}
+
+.new-update .content .info .name{
+  font-size: 14px;
+  flex-grow: 1;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 30%;
+  margin-top: 1px;
+}
+
+.new-update .content .info .name a{
+  display: inline-block;
+  width: 100%;
+  color: #65509e;
+}
+.new-update .content .info .name a:hover{
+  color: #815fdd;
+}
+
+.new-update .content .info .chap{
+  flex-grow: 1;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 30%;
+  color: #000;
+}
+
+.new-update .content .info .author{
+  width: 20%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.new-update .content .info .author a{
+  color: #65509e;
+}
+
+.new-update .content .info .author a:hover{
+  color: #815fdd;
+}
+
+.new-update .content .info .time{
+  white-space: nowrap;
+  color: #999;
+}

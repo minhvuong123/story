@@ -1,0 +1,14 @@
+.new-complete h4{
+  color: #65509e;
+}
+
+.new-complete .content .view {
+  white-space: nowrap;
+  flex-grow: 1;
+  font-size: 14px;
+  text-align: right;
+}
+
+.new-complete .content .info-best .view {
+  text-align: left;
+}
