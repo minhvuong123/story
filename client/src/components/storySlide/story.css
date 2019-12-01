@@ -1,5 +1,5 @@
 .story-title{
-  font-size: 25px;
+  font-size: 25px !important;
 }
 .arrow-back{
   cursor: pointer;
@@ -8,4 +8,15 @@
 .arrow-forward{
   cursor: pointer;
   line-height: 0;
+}
+
+@media screen and (max-width: 375px){
+  .col-story-link{
+    width: 150px;
+    height: 150px;
+  }
+  .story-title{  
+    font-size: 16px !important;
+    color: #815fdd;
+  }
 }

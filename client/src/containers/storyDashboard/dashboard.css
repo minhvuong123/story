@@ -1,0 +1,27 @@
+.story-dash-item{
+  width: 33.333333%;
+}
+
+@media screen and (max-width: 375px){
+  .story-dash-item{
+    width: 50%;
+  }
+}
+
+@media (min-width: 576px){
+  .story-dash-item{
+    width: 33.333333%;
+  }
+}
+
+@media (min-width: 768px){
+  .story-dash-item{
+    width: 25%;
+  }
+}
+
+@media (min-width: 992px){
+  .story-dash-item{
+    width: 20%;
+  }
+}

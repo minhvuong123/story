@@ -65,7 +65,7 @@ class StorySlide extends Component {
     return (
       <Fragment>
         <div className="row mr-0 ml-0 pb-2 d-flex justify-content-between story-title">
-          Tiêu đề story
+          Phổ biến
           <div className="arrows d-flex align-items-center">
             <div className="arrow-back" onClick={this.arrowBack}><IoIosArrowBack/></div>
             <div className="arrow-forward" onClick={this.arrowForward}><IoIosArrowForward/></div>
