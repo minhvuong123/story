@@ -8,8 +8,8 @@ class Main extends Component {
     return (
       <div className="main">
         <div className="container pb-5 mb-5">
-          <StoryDashBoard/>
-          {/* <StoryDetail /> */}
+          {/* <StoryDashBoard/> */}
+          <StoryDetail />
         </div>
       </div>
     )
