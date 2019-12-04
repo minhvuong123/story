@@ -13,9 +13,9 @@ class Stories extends Component {
       <div className="row">
         <div className="col-sm-8 stories">
           <Breadcrumb />
-          <div className="pt-4 pb-4 border-bottom" style={{background: 'rgb(242, 242, 242)'}}>
+          <div className="pt-4 pb-4 pl-4 pr-4 pt-sm-4 pb-sm-4 pl-sm-4 pr-sm-4  border-bottom" style={{background: 'rgb(242, 242, 242)'}}>
             <FormSearch />
-            <div className="d-flex justify-content-center mt-3">
+            <div className="d-none d-lg-flex justify-content-center mt-3">
               <span className="view-type"><IoIosList /></span>
               <span className="view-type ml-3"><IoMdGrid /></span>
             </div>
@@ -27,10 +27,10 @@ class Stories extends Component {
                   <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                 </a>
                 <div className="info">
-                  <h2 className="name mb-0 pr-2 pl-2">
+                  <h2 className="title mb-0 pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">Theo Hỗn Độn Thể Bắt Đầu</a>
                   </h2>
-                  <div className="chap pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
+                  <div className="name pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
                   <div className="author pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau/listen?i=184">Chương 0185 Thái Thượng Đạo Tổ</a>
                     &nbsp;
@@ -47,10 +47,10 @@ class Stories extends Component {
                   <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                 </a>
                 <div className="info">
-                  <h2 className="name mb-0 pr-2 pl-2">
+                  <h2 className="title mb-0 pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">Theo Hỗn Độn Thể Bắt Đầu</a>
                   </h2>
-                  <div className="chap pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
+                  <div className="name pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
                   <div className="author pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau/listen?i=184">Chương 0185 Thái Thượng Đạo Tổ</a>
                     &nbsp;
@@ -67,10 +67,10 @@ class Stories extends Component {
                   <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                 </a>
                 <div className="info">
-                  <h2 className="name mb-0 pr-2 pl-2">
+                  <h2 className="title mb-0 pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">Theo Hỗn Độn Thể Bắt Đầu</a>
                   </h2>
-                  <div className="chap pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
+                  <div className="name pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
                   <div className="author pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau/listen?i=184">Chương 0185 Thái Thượng Đạo Tổ</a>
                     &nbsp;
@@ -87,10 +87,10 @@ class Stories extends Component {
                   <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                 </a>
                 <div className="info">
-                  <h2 className="name mb-0 pr-2 pl-2">
+                  <h2 className="title mb-0 pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">Theo Hỗn Độn Thể Bắt Đầu</a>
                   </h2>
-                  <div className="chap pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
+                  <div className="name pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
                   <div className="author pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau/listen?i=184">Chương 0185 Thái Thượng Đạo Tổ</a>
                     &nbsp;
@@ -107,10 +107,10 @@ class Stories extends Component {
                   <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                 </a>
                 <div className="info">
-                  <h2 className="name mb-0 pr-2 pl-2">
+                  <h2 className="title mb-0 pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">Theo Hỗn Độn Thể Bắt Đầu</a>
                   </h2>
-                  <div className="chap pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
+                  <div className="name pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
                   <div className="author pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau/listen?i=184">Chương 0185 Thái Thượng Đạo Tổ</a>
                     &nbsp;
@@ -127,10 +127,10 @@ class Stories extends Component {
                   <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                 </a>
                 <div className="info">
-                  <h2 className="name mb-0 pr-2 pl-2">
+                  <h2 className="title mb-0 pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">Theo Hỗn Độn Thể Bắt Đầu</a>
                   </h2>
-                  <div className="chap pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
+                  <div className="name pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
                   <div className="author pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau/listen?i=184">Chương 0185 Thái Thượng Đạo Tổ</a>
                     &nbsp;
@@ -147,10 +147,10 @@ class Stories extends Component {
                   <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                 </a>
                 <div className="info">
-                  <h2 className="name mb-0 pr-2 pl-2">
+                  <h2 className="title mb-0 pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">Theo Hỗn Độn Thể Bắt Đầu</a>
                   </h2>
-                  <div className="chap pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
+                  <div className="name pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
                   <div className="author pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau/listen?i=184">Chương 0185 Thái Thượng Đạo Tổ</a>
                     &nbsp;
@@ -167,10 +167,10 @@ class Stories extends Component {
                   <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                 </a>
                 <div className="info">
-                  <h2 className="name mb-0 pr-2 pl-2">
+                  <h2 className="title mb-0 pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">Theo Hỗn Độn Thể Bắt Đầu</a>
                   </h2>
-                  <div className="chap pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
+                  <div className="name pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
                   <div className="author pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau/listen?i=184">Chương 0185 Thái Thượng Đạo Tổ</a>
                     &nbsp;
@@ -187,10 +187,10 @@ class Stories extends Component {
                   <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                 </a>
                 <div className="info">
-                  <h2 className="name mb-0 pr-2 pl-2">
+                  <h2 className="title mb-0 pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">Theo Hỗn Độn Thể Bắt Đầu</a>
                   </h2>
-                  <div className="chap pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
+                  <div className="name pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
                   <div className="author pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau/listen?i=184">Chương 0185 Thái Thượng Đạo Tổ</a>
                     &nbsp;
@@ -207,10 +207,10 @@ class Stories extends Component {
                   <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                 </a>
                 <div className="info">
-                  <h2 className="name mb-0 pr-2 pl-2">
+                  <h2 className="title mb-0 pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">Theo Hỗn Độn Thể Bắt Đầu</a>
                   </h2>
-                  <div className="chap pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
+                  <div className="name pr-2 pl-2">Tiên Nữ Xuyên Liễu Bàn Thứ</div>
                   <div className="author pr-2 pl-2">
                     <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau/listen?i=184">Chương 0185 Thái Thượng Đạo Tổ</a>
                     &nbsp;
@@ -224,25 +224,25 @@ class Stories extends Component {
           </ul>
           <Pagination
               previousLabel={<span className="lnr lnr-chevron-left"></span>}
-              previousClassName={'page-item'}
+              previousClassName={'page-item mt-2'}
               previousLinkClassName={'page-link'}
-              nextClassName={'page-item'}
+              nextClassName={'page-item mt-2'}
               nextLinkClassName={'page-link'}
               nextLabel={<span className="lnr lnr-chevron-right"></span>}
               breakLabel={'...'}
-              breakClassName={'break-me disabled'}
+              breakClassName={'break-me mt-2 disabled'}
               pageCount={20}
               marginPagesDisplayed={2}
               pageRangeDisplayed={2}
               onPageChange={this.handlePageClick}
-              containerClassName={'pagination mt-4 justify-content-center'}
+              containerClassName={'pagination mt-4 justify-content-center flex-wrap'}
               subContainerClassName={'pages pagination'}
               activeClassName={'active'}
-              pageClassName={'page-item'}
+              pageClassName={'page-item mt-2'}
               pageLinkClassName={'page-link'}
             />
         </div>
-        <div className="col-sm-4">
+        <div className="col-sm-4 mt-4 pt-2">
           <div className="stories-filter">
             <div className="block">
                 <h4 className="block-title">Danh mục</h4>

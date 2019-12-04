@@ -111,18 +111,18 @@ class NewComplete extends Component {
           </ul>
         </div>
         <div className="col-sm-8 access">
-          <h4 className="mb-3">Truyện dạng ảnh</h4>
+          <h4 className="mb-0">Truyện dạng ảnh</h4>
           <div className="row">
-            <div className="col-sm-6 col-lg-4 mt-3">
+            <div className="col-6 col-sm-6 col-lg-4 mt-3">
               <Story />
             </div>
-            <div className="col-sm-6 col-lg-4 mt-3">
+            <div className="col-6 col-sm-6 col-lg-4 mt-3">
               <Story />
             </div>
-            <div className="col-sm-6 col-lg-4 mt-3">
+            <div className="col-6 col-sm-6 col-lg-4 mt-3">
               <Story />
             </div>
-            <div className="col-sm-6 col-lg-4 mt-3">
+            <div className="col-6 col-sm-6 col-lg-4 mt-3">
               <Story />
             </div>
           </div>

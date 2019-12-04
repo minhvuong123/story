@@ -60,3 +60,15 @@
 .sort.sort.sort-search button:hover{
   background-color: #65509e;
 }
+
+@media (max-width: 768px){
+  .form-sort{
+    flex-direction: column;
+  }
+  .sort{
+    width: 100%;
+  }
+  .sort.sort-search input{
+    flex-grow: 1;
+  }
+}

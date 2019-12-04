@@ -19,7 +19,7 @@
   flex-grow: 1;
 }
 
-.stories .content .info .name{
+.stories .content .info .title{
   font-size: 14px;
   flex-grow: 1;
   white-space: normal;
@@ -29,16 +29,16 @@
   margin-top: 1px;
 }
 
-.stories .content .info .name a{
+.stories .content .info .title a{
   display: inline-block;
   width: 100%;
   color: #65509e;
 }
-.stories .content .info .name a:hover{
+.stories .content .info .title a:hover{
   color: #815fdd;
 }
 
-.stories .content .info .chap{
+.stories .content .info .name{
   flex-grow: 1;
   white-space: normal;
   text-overflow: ellipsis;
@@ -114,4 +114,65 @@
 .stories-filter .block .block-content span:hover{
   background-color: #65509e;
   color: #fff;
+}
+
+@media (max-width: 768px){
+  .stories .list-group .list-group-item{
+    width: 50%;
+  }
+  .stories .content .thumb{
+    min-width: 55px;
+  }
+  .stories .content .info{
+    flex-direction: column;
+  }
+  .stories .content .info .title{
+    width: 100%;
+    font-size: 13px;
+  }
+  .stories .content .info .name{
+    width: 100%;
+    font-size: 12px;
+  }
+  .stories .content .info .author{
+    width: 100%;
+    font-size: 10px;
+  }
+  .stories .content .info .time{
+    width: 100%;
+    font-size: 7px;
+  }
+
+  .stories .list-group{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 426px){
+  .stories .list-group{
+    flex-direction: column;
+  }
+
+  .stories .content .thumb{
+    min-width: 90px;
+  }
+  .stories .content .info{
+    flex-direction: column;
+  }
+  .stories .content .info .title{
+    font-size: 19px;
+  }
+  .stories .content .info .name{
+    width: 100%;
+    font-size: 17px;
+  }
+  .stories .content .info .author{
+    width: 100%;
+    font-size: 15px;
+  }
+  .stories .content .info .time{
+    width: 100%;
+    font-size: 13px;
+  }
 }

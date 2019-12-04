@@ -36,7 +36,7 @@ class StoryDetail extends Component {
                     </h2>
                     <div className="author pr-2 pl-2">Thanh Hưng</div>
                   </div>
-                  <div className="z-duration pr-2 pl-2">04:30</div>
+                  <div className="z-duration pr-2 pl-2 d-none d-sm-inline-block">04:30</div>
                   <div className="extension">
                     <ul>
                       <li><IoMdHeartEmpty /></li>
@@ -66,7 +66,7 @@ class StoryDetail extends Component {
                     </h2>
                     <div className="author pr-2 pl-2">Thanh Hưng</div>
                   </div>
-                  <div className="z-duration pr-2 pl-2">04:30</div>
+                  <div className="z-duration pr-2 pl-2 d-none d-sm-inline-block">04:30</div>
                   <div className="extension">
                     <ul>
                       <li><IoMdHeartEmpty /></li>
@@ -96,7 +96,7 @@ class StoryDetail extends Component {
                     </h2>
                     <div className="author pr-2 pl-2">Thanh Hưng</div>
                   </div>
-                  <div className="z-duration pr-2 pl-2">04:30</div>
+                  <div className="z-duration pr-2 pl-2 d-none d-sm-inline-block">04:30</div>
                   <div className="extension">
                     <ul>
                       <li><IoMdHeartEmpty /></li>
@@ -126,7 +126,7 @@ class StoryDetail extends Component {
                     </h2>
                     <div className="author pr-2 pl-2">Thanh Hưng</div>
                   </div>
-                  <div className="z-duration pr-2 pl-2">04:30</div>
+                  <div className="z-duration pr-2 pl-2 d-none d-sm-inline-block">04:30</div>
                   <div className="extension">
                     <ul>
                       <li><IoMdHeartEmpty /></li>
@@ -156,7 +156,7 @@ class StoryDetail extends Component {
                     </h2>
                     <div className="author pr-2 pl-2">Thanh Hưng</div>
                   </div>
-                  <div className="z-duration pr-2 pl-2">04:30</div>
+                  <div className="z-duration pr-2 pl-2 d-none d-sm-inline-block">04:30</div>
                   <div className="extension">
                     <ul>
                       <li><IoMdHeartEmpty /></li>
@@ -186,7 +186,7 @@ class StoryDetail extends Component {
                     </h2>
                     <div className="author pr-2 pl-2">Thanh Hưng</div>
                   </div>
-                  <div className="z-duration pr-2 pl-2">04:30</div>
+                  <div className="z-duration pr-2 pl-2 d-none d-sm-inline-block">04:30</div>
                   <div className="extension">
                     <ul>
                       <li><IoMdHeartEmpty /></li>
@@ -216,7 +216,7 @@ class StoryDetail extends Component {
                     </h2>
                     <div className="author pr-2 pl-2">Thanh Hưng</div>
                   </div>
-                  <div className="z-duration pr-2 pl-2">04:30</div>
+                  <div className="z-duration pr-2 pl-2 d-none d-sm-inline-block">04:30</div>
                   <div className="extension">
                     <ul>
                       <li><IoMdHeartEmpty /></li>
@@ -246,7 +246,7 @@ class StoryDetail extends Component {
                     </h2>
                     <div className="author pr-2 pl-2">Thanh Hưng</div>
                   </div>
-                  <div className="z-duration pr-2 pl-2">04:30</div>
+                  <div className="z-duration pr-2 pl-2 d-none d-sm-inline-block">04:30</div>
                   <div className="extension">
                     <ul>
                       <li><IoMdHeartEmpty /></li>
@@ -276,7 +276,7 @@ class StoryDetail extends Component {
                     </h2>
                     <div className="author pr-2 pl-2">Thanh Hưng</div>
                   </div>
-                  <div className="z-duration pr-2 pl-2">04:30</div>
+                  <div className="z-duration pr-2 pl-2 d-none d-sm-inline-block">04:30</div>
                   <div className="extension">
                     <ul>
                       <li><IoMdHeartEmpty /></li>
@@ -306,7 +306,7 @@ class StoryDetail extends Component {
                     </h2>
                     <div className="author pr-2 pl-2">Thanh Hưng</div>
                   </div>
-                  <div className="z-duration pr-2 pl-2">04:30</div>
+                  <div className="z-duration pr-2 pl-2 d-none d-sm-inline-block">04:30</div>
                   <div className="extension">
                     <ul>
                       <li><IoMdHeartEmpty /></li>
@@ -326,21 +326,21 @@ class StoryDetail extends Component {
             </ul>
             <Pagination
               previousLabel={<span className="lnr lnr-chevron-left"></span>}
-              previousClassName={'page-item'}
+              previousClassName={'page-item mt-2'}
               previousLinkClassName={'page-link'}
-              nextClassName={'page-item'}
+              nextClassName={'page-item mt-2'}
               nextLinkClassName={'page-link'}
               nextLabel={<span className="lnr lnr-chevron-right"></span>}
               breakLabel={'...'}
-              breakClassName={'break-me disabled'}
+              breakClassName={'break-me mt-2 disabled'}
               pageCount={20}
               marginPagesDisplayed={2}
               pageRangeDisplayed={2}
               onPageChange={this.handlePageClick}
-              containerClassName={'pagination mt-4 justify-content-center'}
+              containerClassName={'pagination mt-4 justify-content-center flex-wrap'}
               subContainerClassName={'pages pagination'}
               activeClassName={'active'}
-              pageClassName={'page-item'}
+              pageClassName={'page-item mt-2'}
               pageLinkClassName={'page-link'}
             />
           </div>
