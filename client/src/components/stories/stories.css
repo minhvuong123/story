@@ -1,0 +1,117 @@
+.stories .title{
+  color: #65509e;
+}
+.stories .content .thumb{
+  min-width: 30px;
+  min-height: 30px;
+  width: 30px;
+  display: inline-block
+}
+
+.stories .content .thumb img{
+  width: 100%;
+  height: 100%;
+}
+
+.stories .content .info{
+  font-size: 14px;
+  display: flex;
+  flex-grow: 1;
+}
+
+.stories .content .info .name{
+  font-size: 14px;
+  flex-grow: 1;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 30%;
+  margin-top: 1px;
+}
+
+.stories .content .info .name a{
+  display: inline-block;
+  width: 100%;
+  color: #65509e;
+}
+.stories .content .info .name a:hover{
+  color: #815fdd;
+}
+
+.stories .content .info .chap{
+  flex-grow: 1;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 30%;
+  color: #000;
+}
+
+.stories .content .info .author{
+  width: 20%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.stories .content .info .author a{
+  color: #65509e;
+}
+
+.stories .content .info .author a:hover{
+  color: #815fdd;
+}
+
+.stories .content .info .time{
+  white-space: nowrap;
+  color: #999;
+}
+
+.stories .view-type{
+  background-color: #815fdd;
+  border: 1px solid #65509e;
+  cursor: pointer;
+  color: #fff;
+  line-height: 0;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 3px;
+}
+.stories .view-type:hover{
+  background-color: #65509e;
+}
+
+.stories-filter{
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,.15);
+  padding: 20px 12px 12px;
+}
+
+.stories-filter .block .block-title{
+  color: #65509e;
+}
+
+.stories-filter .block .block-content span{
+  color: #6b9876;
+  background-color: transparent;
+  box-shadow: 0 3px 4px 0 rgba(107,152,118,.3);
+  transition: all .2s ease-in-out;
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  border: 1px solid #65509e;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+  color: #815fdd;
+
+}
+
+.stories-filter .block .block-content span.active{
+  background-color: #65509e;
+  color: #fff;
+}
+.stories-filter .block .block-content span:hover{
+  background-color: #65509e;
+  color: #fff;
+}

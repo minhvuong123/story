@@ -1,17 +1,26 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Breadcrumb from '../breadcrumb';
+import FormSearch from '../formSearch';
+import Pagination from 'react-paginate';
 
-import './update.css';
+import { IoIosList, IoMdGrid } from 'react-icons/io'
 
-class NewUpdate extends Component {
+import './stories.css';
+
+class Stories extends Component {
   render() {
     return (
-      <div className="row mt-5">
-        <div className="col-sm-4">
-
-        </div>
-        <div className="col-sm-8 new-update">
-          <h4 className="title">Mới cập nhật</h4>
-          <ul className="list-group list-group-flush">
+      <div className="row">
+        <div className="col-sm-8 stories">
+          <Breadcrumb />
+          <div className="pt-4 pb-4 border-bottom" style={{background: 'rgb(242, 242, 242)'}}>
+            <FormSearch />
+            <div className="d-flex justify-content-center mt-3">
+              <span className="view-type"><IoIosList /></span>
+              <span className="view-type ml-3"><IoMdGrid /></span>
+            </div>
+          </div>
+          <ul className="list-group list-group-flush mt-4">
             <li className="list-group-item mb-0 pr-0 pl-0 pb-2 pt-2">
               <div className="content d-flex align-items-center">
                 <a className="thumb" href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">
@@ -213,10 +222,46 @@ class NewUpdate extends Component {
               </div>
             </li>
           </ul>
-        
+          <Pagination
+              previousLabel={<span className="lnr lnr-chevron-left"></span>}
+              previousClassName={'page-item'}
+              previousLinkClassName={'page-link'}
+              nextClassName={'page-item'}
+              nextLinkClassName={'page-link'}
+              nextLabel={<span className="lnr lnr-chevron-right"></span>}
+              breakLabel={'...'}
+              breakClassName={'break-me disabled'}
+              pageCount={20}
+              marginPagesDisplayed={2}
+              pageRangeDisplayed={2}
+              onPageChange={this.handlePageClick}
+              containerClassName={'pagination mt-4 justify-content-center'}
+              subContainerClassName={'pages pagination'}
+              activeClassName={'active'}
+              pageClassName={'page-item'}
+              pageLinkClassName={'page-link'}
+            />
+        </div>
+        <div className="col-sm-4">
+          <div className="stories-filter">
+            <div className="block">
+                <h4 className="block-title">Danh mục</h4>
+                <div className="block-content d-flex flex-wrap justify-content-between">
+                  <span className="active">Tiên hiệp</span>
+                  <span>Kiếm hiệp</span>
+                  <span>Đô thị</span>
+                  <span>Huyển ảo</span>
+                  <span>Ngôn tình</span>
+                  <span>Dị năng</span>
+                  <span>Võng du</span>
+                  <span>Dị giới</span>
+                </div>
+            </div>
+          </div>
         </div>
       </div>
     )
   }
 }
-export default NewUpdate;
+
+export default Stories;

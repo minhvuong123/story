@@ -30,7 +30,7 @@ class Header extends Component {
                 <a href="/" className="user-info">Đăng nhập</a>
               </div>
             </div>
-            {/* <Navigation /> */}
+            <Navigation />
           </div>
         </div>
       </div>

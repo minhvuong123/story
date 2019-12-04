@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { 
   IoIosVolumeHigh,
-  IoIosVolumeLow,
-  IoIosVolumeMute,
-  IoIosVolumeOff,
+  // IoIosVolumeLow,
+  // IoIosVolumeMute,
+  // IoIosVolumeOff,
   IoIosSettings,
 } from "react-icons/io";
 import moment from 'moment';
@@ -89,7 +89,7 @@ class PlayDetail extends Component {
 
   setProgress = (e) => {
     const { statusProgress } = this.state;
-    const { player, duration, currentTimeAudio, changePlay } = this.props;
+    const { player, duration, currentTimeAudio } = this.props;
     if(statusProgress){
       const progress = (e.nativeEvent.offsetX / this.refProgress.current.getBoundingClientRect().width) * duration;
       player.current.currentTime = progress > duration ? duration : progress;

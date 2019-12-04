@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Story from '../story';
-import { IoIosStar } from 'react-icons/io';
+// import { IoIosStar } from 'react-icons/io';
 
 import './complete.css';
 
@@ -14,7 +14,7 @@ class NewComplete extends Component {
             <li className="list-group-item mb-0 p-0">
               <div className="content d-flex">
                 <div className="info info-best flex-grow-1 d-flex">
-                  <a href="#" className="flex-grow-1 pt-2 pb-2">Vũ Thần Chúa Tể</a>
+                  <a href="/" className="flex-grow-1 pt-2 pb-2">Vũ Thần Chúa Tể</a>
                   <p className="view mb-0">Truy cập : <span>6500609</span></p>
                   <div className="extra-info">
                     <p className="mb-0">
@@ -39,7 +39,7 @@ class NewComplete extends Component {
             <li className="list-group-item mb-0 p-0">
               <div className="content">
                 <div className="info d-flex">
-                  <a href="#" className="flex-grow-1 pt-2 pb-2">Vũ Luyện Điên Phong</a>
+                  <a href="/" className="flex-grow-1 pt-2 pb-2">Vũ Luyện Điên Phong</a>
                   <span className="view pt-2 pb-2">3731585 Truy cập</span>
                 </div>
               </div>
@@ -47,7 +47,7 @@ class NewComplete extends Component {
             <li className="list-group-item mb-0 p-0">
               <div className="content">
                 <div className="info d-flex">
-                  <a href="#" className="flex-grow-1 pt-2 pb-2">Cực Phẩm Tiên Đế Tại Đô Thị</a>
+                  <a href="/" className="flex-grow-1 pt-2 pb-2">Cực Phẩm Tiên Đế Tại Đô Thị</a>
                   <span className="view pt-2 pb-2">1274953 Truy cập</span>
                 </div>
               </div>
@@ -55,7 +55,7 @@ class NewComplete extends Component {
             <li className="list-group-item mb-0 p-0">
               <div className="content">
                 <div className="info d-flex">
-                  <a href="#" className="flex-grow-1 pt-2 pb-2">Siêu Thần Yêu Nghiệt</a>
+                  <a href="/" className="flex-grow-1 pt-2 pb-2">Siêu Thần Yêu Nghiệt</a>
                   <span className="view pt-2 pb-2">4366000 Truy cập</span>
                 </div>
               </div>
@@ -63,7 +63,7 @@ class NewComplete extends Component {
             <li className="list-group-item mb-0 p-0">
               <div className="content">
                 <div className="info d-flex">
-                  <a href="#" className="flex-grow-1 pt-2 pb-2">Yêu Long Cổ Đế</a>
+                  <a href="/" className="flex-grow-1 pt-2 pb-2">Yêu Long Cổ Đế</a>
                   <span className="view pt-2 pb-2">3292791 Truy cập</span>
                 </div>
               </div>
@@ -71,7 +71,7 @@ class NewComplete extends Component {
             <li className="list-group-item mb-0 p-0">
               <div className="content">
                 <div className="info d-flex">
-                  <a href="#" className="flex-grow-1 pt-2 pb-2">Đế tôn</a>
+                  <a href="/" className="flex-grow-1 pt-2 pb-2">Đế tôn</a>
                   <span className="view pt-2 pb-2">4080244 Truy cập</span>
                 </div>
               </div>
@@ -79,7 +79,7 @@ class NewComplete extends Component {
             <li className="list-group-item mb-0 p-0">
               <div className="content">
                 <div className="info d-flex">
-                  <a href="#" className="flex-grow-1 pt-2 pb-2">Đế bá</a>
+                  <a href="/" className="flex-grow-1 pt-2 pb-2">Đế bá</a>
                   <span className="view pt-2 pb-2">4080244 Truy cập</span>
                 </div>
               </div>
@@ -87,7 +87,7 @@ class NewComplete extends Component {
             <li className="list-group-item mb-0 p-0">
               <div className="content">
                 <div className="info d-flex">
-                  <a href="#" className="flex-grow-1 pt-2 pb-2">Vô Tận Đan Điền</a>
+                  <a href="/" className="flex-grow-1 pt-2 pb-2">Vô Tận Đan Điền</a>
                   <span className="view pt-2 pb-2">4080244 Truy cập</span>
                 </div>
               </div>
@@ -95,7 +95,7 @@ class NewComplete extends Component {
             <li className="list-group-item mb-0 p-0">
               <div className="content">
                 <div className="info d-flex">
-                  <a href="#" className="flex-grow-1 pt-2 pb-2">Vô Thượng Sát Thần</a>
+                  <a href="/" className="flex-grow-1 pt-2 pb-2">Vô Thượng Sát Thần</a>
                   <span className="view pt-2 pb-2">4080244 Truy cập</span>
                 </div>
               </div>
@@ -103,7 +103,7 @@ class NewComplete extends Component {
             <li className="list-group-item mb-0 p-0">
               <div className="content">
                 <div className="info d-flex">
-                  <a href="#" className="flex-grow-1 pt-2 pb-2">Toàn Chức Pháp Sư</a>
+                  <a href="/" className="flex-grow-1 pt-2 pb-2">Toàn Chức Pháp Sư</a>
                   <span className="view pt-2 pb-2">4080244 Truy cập</span>
                 </div>
               </div>

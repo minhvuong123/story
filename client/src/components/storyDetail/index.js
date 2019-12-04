@@ -3,7 +3,6 @@ import Pagination from 'react-paginate';
 import { IoMdHeartEmpty, IoIosMore, IoIosPlay } from 'react-icons/io'
 
 import './detail.css';
-import StoryDescription from '../storyDes';
 
 class StoryDetail extends Component {
   render() {
@@ -16,7 +15,9 @@ class StoryDetail extends Component {
             </div>
             <h4 className="mt-3 text-center">Theo Hỗn Độn Thể Bắt Đầu</h4>
             <div className="text-center mt-3">
-              <a class="z-btn"><span style={{fontSize: '20px'}}><IoIosPlay /></span> Tiếp tục phát</a>
+              <a className="z-btn"><span style={{fontSize: '20px'}}>
+                <IoIosPlay /></span> Tiếp tục phát
+              </a>
             </div>
             <div className="text-center mt-3" style={{fontSize: '13px', color: '#999'}}>14 audio truyện - 1 giờ 6 phút</div>
           </div>
@@ -26,7 +27,7 @@ class StoryDetail extends Component {
                 <div className="content d-flex align-items-center">
                   <div className="index p-2">1</div>
                   <a className="thumb" href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">
-                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu" itemprop="image" />
+                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu" />
                     <div className="thumb-play-opacity"><IoIosPlay /></div>
                   </a>
                   <div className="info flex-column">
@@ -40,12 +41,12 @@ class StoryDetail extends Component {
                     <ul>
                       <li><IoMdHeartEmpty /></li>
                       <li className="dropdown">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a className="dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <IoIosMore />
                         </a>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <a className="dropdown-item" href="#">Thêm vào danh sách phát</a>
-                          <a className="dropdown-item" href="#">Tải xuống</a>
+                          <a className="dropdown-item" href="/">Thêm vào danh sách phát</a>
+                          <a className="dropdown-item" href="/">Tải xuống</a>
                         </div>
                       </li>
                     </ul>
@@ -56,7 +57,7 @@ class StoryDetail extends Component {
                 <div className="content d-flex align-items-center">
                   <div className="index p-2">2</div>
                   <a className="thumb" href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">
-                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu" itemprop="image" />
+                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu" />
                     <div className="thumb-play-opacity"><IoIosPlay /></div>
                   </a>
                   <div className="info flex-column">
@@ -70,12 +71,12 @@ class StoryDetail extends Component {
                     <ul>
                       <li><IoMdHeartEmpty /></li>
                       <li className="dropdown">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a className="dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <IoIosMore />
                         </a>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <a className="dropdown-item" href="#">Thêm vào danh sách phát</a>
-                          <a className="dropdown-item" href="#">Tải xuống</a>
+                          <a className="dropdown-item" href="/">Thêm vào danh sách phát</a>
+                          <a className="dropdown-item" href="/">Tải xuống</a>
                         </div>
                       </li>
                     </ul>
@@ -86,7 +87,7 @@ class StoryDetail extends Component {
                 <div className="content d-flex align-items-center">
                   <div className="index p-2">3</div>
                   <a className="thumb" href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">
-                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu" itemprop="image" />
+                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                     <div className="thumb-play-opacity"><IoIosPlay /></div>
                   </a>
                   <div className="info flex-column">
@@ -100,12 +101,12 @@ class StoryDetail extends Component {
                     <ul>
                       <li><IoMdHeartEmpty /></li>
                       <li className="dropdown">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a className="dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <IoIosMore />
                         </a>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <a className="dropdown-item" href="#">Thêm vào danh sách phát</a>
-                          <a className="dropdown-item" href="#">Tải xuống</a>
+                          <a className="dropdown-item" href="/">Thêm vào danh sách phát</a>
+                          <a className="dropdown-item" href="/">Tải xuống</a>
                         </div>
                       </li>
                     </ul>
@@ -116,7 +117,7 @@ class StoryDetail extends Component {
                 <div className="content d-flex align-items-center">
                   <div className="index p-2">4</div>
                   <a className="thumb" href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">
-                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu" itemprop="image" />
+                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                     <div className="thumb-play-opacity"><IoIosPlay /></div>
                   </a>
                   <div className="info flex-column">
@@ -130,12 +131,12 @@ class StoryDetail extends Component {
                     <ul>
                       <li><IoMdHeartEmpty /></li>
                       <li className="dropdown">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a className="dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <IoIosMore />
                         </a>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <a className="dropdown-item" href="#">Thêm vào danh sách phát</a>
-                          <a className="dropdown-item" href="#">Tải xuống</a>
+                          <a className="dropdown-item" href="/">Thêm vào danh sách phát</a>
+                          <a className="dropdown-item" href="/">Tải xuống</a>
                         </div>
                       </li>
                     </ul>
@@ -146,7 +147,7 @@ class StoryDetail extends Component {
                 <div className="content d-flex align-items-center">
                   <div className="index p-2">5</div>
                   <a className="thumb" href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">
-                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu" itemprop="image" />
+                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                     <div className="thumb-play-opacity"><IoIosPlay /></div>
                   </a>
                   <div className="info flex-column">
@@ -160,12 +161,12 @@ class StoryDetail extends Component {
                     <ul>
                       <li><IoMdHeartEmpty /></li>
                       <li className="dropdown">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a className="dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <IoIosMore />
                         </a>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <a className="dropdown-item" href="#">Thêm vào danh sách phát</a>
-                          <a className="dropdown-item" href="#">Tải xuống</a>
+                          <a className="dropdown-item" href="/">Thêm vào danh sách phát</a>
+                          <a className="dropdown-item" href="/">Tải xuống</a>
                         </div>
                       </li>
                     </ul>
@@ -176,7 +177,7 @@ class StoryDetail extends Component {
                 <div className="content d-flex align-items-center">
                   <div className="index p-2">6</div>
                   <a className="thumb" href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">
-                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu" itemprop="image" />
+                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                     <div className="thumb-play-opacity"><IoIosPlay /></div>
                   </a>
                   <div className="info flex-column">
@@ -190,12 +191,12 @@ class StoryDetail extends Component {
                     <ul>
                       <li><IoMdHeartEmpty /></li>
                       <li className="dropdown">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a className="dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <IoIosMore />
                         </a>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <a className="dropdown-item" href="#">Thêm vào danh sách phát</a>
-                          <a className="dropdown-item" href="#">Tải xuống</a>
+                          <a className="dropdown-item" href="/">Thêm vào danh sách phát</a>
+                          <a className="dropdown-item" href="/">Tải xuống</a>
                         </div>
                       </li>
                     </ul>
@@ -206,7 +207,7 @@ class StoryDetail extends Component {
                 <div className="content d-flex align-items-center">
                   <div className="index p-2">7</div>
                   <a className="thumb" href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">
-                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu" itemprop="image" />
+                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                     <div className="thumb-play-opacity"><IoIosPlay /></div>
                   </a>
                   <div className="info flex-column">
@@ -220,12 +221,12 @@ class StoryDetail extends Component {
                     <ul>
                       <li><IoMdHeartEmpty /></li>
                       <li className="dropdown">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a className="dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <IoIosMore />
                         </a>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <a className="dropdown-item" href="#">Thêm vào danh sách phát</a>
-                          <a className="dropdown-item" href="#">Tải xuống</a>
+                          <a className="dropdown-item" href="/">Thêm vào danh sách phát</a>
+                          <a className="dropdown-item" href="/">Tải xuống</a>
                         </div>
                       </li>
                     </ul>
@@ -236,7 +237,7 @@ class StoryDetail extends Component {
                 <div className="content d-flex align-items-center">
                   <div className="index p-2">8</div>
                   <a className="thumb" href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">
-                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu" itemprop="image" />
+                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                     <div className="thumb-play-opacity"><IoIosPlay /></div>
                   </a>
                   <div className="info flex-column">
@@ -250,12 +251,12 @@ class StoryDetail extends Component {
                     <ul>
                       <li><IoMdHeartEmpty /></li>
                       <li className="dropdown">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a className="dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <IoIosMore />
                         </a>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <a className="dropdown-item" href="#">Thêm vào danh sách phát</a>
-                          <a className="dropdown-item" href="#">Tải xuống</a>
+                          <a className="dropdown-item" href="/">Thêm vào danh sách phát</a>
+                          <a className="dropdown-item" href="/">Tải xuống</a>
                         </div>
                       </li>
                     </ul>
@@ -266,7 +267,7 @@ class StoryDetail extends Component {
                 <div className="content d-flex align-items-center">
                   <div className="index p-2">9</div>
                   <a className="thumb" href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">
-                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu" itemprop="image" />
+                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                     <div className="thumb-play-opacity"><IoIosPlay /></div>
                   </a>
                   <div className="info flex-column">
@@ -280,12 +281,12 @@ class StoryDetail extends Component {
                     <ul>
                       <li><IoMdHeartEmpty /></li>
                       <li className="dropdown">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a className="dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <IoIosMore />
                         </a>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <a className="dropdown-item" href="#">Thêm vào danh sách phát</a>
-                          <a className="dropdown-item" href="#">Tải xuống</a>
+                          <a className="dropdown-item" href="/">Thêm vào danh sách phát</a>
+                          <a className="dropdown-item" href="/">Tải xuống</a>
                         </div>
                       </li>
                     </ul>
@@ -296,7 +297,7 @@ class StoryDetail extends Component {
                 <div className="content d-flex align-items-center">
                   <div className="index p-2">10</div>
                   <a className="thumb" href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" title="Theo Hỗn Độn Thể Bắt Đầu">
-                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu" itemprop="image" />
+                    <img className="img-responsive" src="https://truyenaudiocv.com/uploads/manga/huyen-huyen-theo-hon-don-the-bat-dau/cover/cover_thumb.jpg" alt="Theo Hỗn Độn Thể Bắt Đầu"  />
                     <div className="thumb-play-opacity"><IoIosPlay /></div>
                   </a>
                   <div className="info flex-column">
@@ -310,12 +311,12 @@ class StoryDetail extends Component {
                     <ul>
                       <li><IoMdHeartEmpty /></li>
                       <li className="dropdown">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a className="dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <IoIosMore />
                         </a>
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <a className="dropdown-item" href="#">Thêm vào danh sách phát</a>
-                          <a className="dropdown-item" href="#">Tải xuống</a>
+                          <a className="dropdown-item" href="/">Thêm vào danh sách phát</a>
+                          <a className="dropdown-item" href="/">Tải xuống</a>
                         </div>
                       </li>
                     </ul>
@@ -329,7 +330,7 @@ class StoryDetail extends Component {
               previousLinkClassName={'page-link'}
               nextClassName={'page-item'}
               nextLinkClassName={'page-link'}
-              nextLabel={<span class="lnr lnr-chevron-right"></span>}
+              nextLabel={<span className="lnr lnr-chevron-right"></span>}
               breakLabel={'...'}
               breakClassName={'break-me disabled'}
               pageCount={20}

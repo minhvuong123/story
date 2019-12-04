@@ -7,6 +7,8 @@ import RootReducer from './redux/reducers';
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
+import 'jquery/dist/jquery';
+import 'bootstrap-select/dist/js/bootstrap-select'
 import * as serviceWorker from './serviceWorker';
 
 const store = createStore(RootReducer);
