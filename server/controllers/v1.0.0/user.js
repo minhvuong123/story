@@ -76,10 +76,9 @@ Router.delete('/delete', async (req, res) => {
     }
 })
 
-Router.put('/modify', async (req, res) => {
+Router.put('/modify', async (req, res) => { 
     try {
         const { id, ...user } = req.body;
-
         if( !id || !user ) {
             handleError(res, { code: 400, msg: "Invalid values" });
             return;
@@ -93,9 +92,10 @@ Router.put('/modify', async (req, res) => {
           await userModel.modify( user , { where: { id } });
 
           handleSuccess(res, { msg: 'Update is success' });
+        } else {
+          handleError(res, { code: 400, msg: "ID is not found" });
         }
 
-          handleError(res, { code: 400, msg: "ID is not found" });
     } catch (err) {
         handleError(res, { code: 500, msg: "Server is error" });
     }

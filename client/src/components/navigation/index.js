@@ -18,7 +18,7 @@ class Header extends Component {
           <div className=" navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
               <div className="nav-item">
-                <NavLink className="nav-link active" to="/">Home <span className="sr-only">(current)</span></NavLink>
+                <NavLink className="nav-link active" to="/">Home</NavLink>
               </div>
               <div className="nav-item">
                 <NavLink 
@@ -51,6 +51,9 @@ class Header extends Component {
                       <NavLink to="/category/di-gioi" className="nav-category-item nav-link">Dị Giới</NavLink>
                     </li>
                   </ul>
+              </div>
+              <div className="nav-item">
+                <NavLink className="nav-link active" to="/manager">Quản lý</NavLink>
               </div>
             </div>
           </div>

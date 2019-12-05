@@ -73,6 +73,10 @@
   cursor: pointer;
 }
 
+.user-profile-icon:after{
+  content: unset !important;
+}
+
 .user-profile-icon:hover{
   color: #fff;
 }

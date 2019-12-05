@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import StoryDashBoard from '../storyDashboard';
 import StoryDetail from '../../components/storyDetail';
 import Stories from '../../components/stories';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
-import styled from "styled-components";
+import Login from '../../users/login';
+import Register from '../../users/register';
+
 
 import {
   Switch,
@@ -12,7 +13,12 @@ import {
 } from "react-router-dom";
 
 
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import styled from "styled-components";
 import "./main.css";
+import Profile from '../../users/profile';
+import Manager from '../../users/manager';
+
 
 class Main extends Component {
   render() {
@@ -34,6 +40,10 @@ class Main extends Component {
                     <Route path="/category" component={Stories} />
                     <Route path="/category/:catName" component={StoryDetail} />
                     <Route path="/stories/:id" component={StoryDetail} />
+                    <Route path="/manager" component={Manager} />
+                    <Route path="/login" component={Login} />
+                    <Route path="/register" component={Register} />
+                    <Route path="/profile" component={Profile} />
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>
