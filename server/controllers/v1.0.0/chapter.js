@@ -55,9 +55,10 @@ Router.post('/add', async (req, res) => {
       }
 
       handleSuccess(res, { chapter });
+    } else {
+      handleError(res, { code: 400, msg: "StoryID is not found" });
     }
-
-    handleError(res, { code: 400, msg: "StoryID is not found" });
+    
   } catch (err) {
     handleError(res, { code: 500, msg: "Server is error" });
   }

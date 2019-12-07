@@ -8,6 +8,7 @@ const generateId = require('../../helpers/generateId');
 const {
   Story: StoryModel,
   Category: CategoryModel,
+  Chapter: ChapterModel,
 } = require('../../models'); // remember define to table in mysql
 
 // response 
@@ -17,7 +18,7 @@ const { handleSuccess, handleError } = require('../../helpers/response');
 const upload = require('../../helpers/upload');
 
 
-Router.post('/upload', upload.single('avatar'), (req, res) => {
+Router.post('/upload', upload.array('imgUrl', 12), (req, res) => {
   console.log(req.file);
   res.send('abc')
 })
@@ -31,6 +32,7 @@ Router.post('/', async (req, res) => {
             handleError(res, { code: 400, msg: "Invalid values" });
             return;
         }
+
         const offset = (page - 1) * limit;
         
         const stories = await StoryModel.getAll( [], {}, { offset, limit } );
@@ -39,6 +41,33 @@ Router.post('/', async (req, res) => {
     } catch (err) {
         handleError(res, { code: 500, msg: "Server is error" });
     }
+})
+
+Router.post('/detail', async (req, res) => {
+  try {
+      const { slugName, page, limit } = req.body;
+      console.log(slugName, page, limit);
+      
+      
+      if(!slugName) {
+          handleError(res, { code: 400, msg: "Invalid values" });
+          return;
+      }
+
+      const offset = (page - 1) * limit;
+
+      const story = await StoryModel.getAll( [], { where: { slugName } });
+      
+      const storyID = story[0].dataValues.id;
+
+      const totalPaginate = Math.ceil(story[0].dataValues.totalChapter / 10); ;
+
+      const chapter = await ChapterModel.getAll( [], { where: { storyID }, order: [ ['chapterNumber', 'ASC'] ]},{ offset, limit } );
+
+      handleSuccess(res, { story: story[0], chapter, totalPaginate });
+  } catch (err) {
+      handleError(res, { code: 500, msg: "Server is error" });
+  }
 })
 
 Router.post('/add', async (req, res) => {
@@ -65,9 +94,9 @@ Router.post('/add', async (req, res) => {
       }
 
       handleSuccess(res, { story });
+    } else {
+      handleError(res, { code: 400, msg: "CategoryID is not found" });
     }
-
-    handleError(res, { code: 400, msg: "CategoryID is not found" });
   } catch (err) {
     handleError(res, { code: 500, msg: "Server is error" });
   }

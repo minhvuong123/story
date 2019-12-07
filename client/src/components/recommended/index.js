@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { NavLink } from 'react-router-dom';
+ 
+import { apiShare } from '../../constants';
 
 import { IoIosStar } from 'react-icons/io';
 
@@ -8,6 +11,7 @@ import "./recommended.css";
 
 class Recommended extends Component {
   render() {
+    const { stories } = this.props;
     return (
       <div className="row">
         <div className="col-sm-4 pt-0 recommend-slide">
@@ -163,72 +167,23 @@ class Recommended extends Component {
         <div className="col-sm-4 access">
           <h4 className="mb-3">Truy cập nhiều</h4>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item mb-0">
-              <div className="item">
-                <h4 className="title mb-0">
-                  <a href="https://truyenaudiocv.com/than-dao-dan-ton" title="Thần Đạo Đan Tôn">Thần Đạo Đan Tôn</a>
-                </h4>
-                <div className="view">
-                  <strong className="mr-2">6500609</strong>
-                  Truy cập
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item mb-0">
-              <div className="item">
-                <h4 className="title mb-0">
-                  <a href="https://truyenaudiocv.com/than-dao-dan-ton" title="Thần Đạo Đan Tôn">Siêu Thần Yêu Nghiệt</a>
-                </h4>
-                <div className="view">
-                  <strong className="mr-2">3731585</strong>
-                  Truy cập
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item mb-0">
-              <div className="item">
-                <h4 className="title mb-0">
-                  <a href="https://truyenaudiocv.com/than-dao-dan-ton" title="Thần Đạo Đan Tôn">Vạn Vực Linh Thần</a>
-                </h4>
-                <div className="view">
-                  <strong className="mr-2">1274953 </strong>
-                  Truy cập
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item mb-0">
-              <div className="item">
-                <h4 className="title mb-0">
-                  <a href="https://truyenaudiocv.com/than-dao-dan-ton" title="Thần Đạo Đan Tôn">Đế bá</a>
-                </h4>
-                <div className="view">
-                  <strong className="mr-2">4366000 </strong>
-                  Truy cập
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item mb-0">
-              <div className="item">
-                <h4 className="title mb-0">
-                  <a href="https://truyenaudiocv.com/than-dao-dan-ton" title="Thần Đạo Đan Tôn">Yêu Long Cổ Đế</a>
-                </h4>
-                <div className="view">
-                  <strong className="mr-2">3292791 </strong>
-                  Truy cập
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item mb-0">
-              <div className="item">
-                <h4 className="title mb-0">
-                  <a href="https://truyenaudiocv.com/than-dao-dan-ton" title="Thần Đạo Đan Tôn">Vô Tận Đan Điền</a>
-                </h4>
-                <div className="view">
-                  <strong className="mr-2">4080244 </strong>
-                  Truy cập
-                </div>
-              </div>
-            </li>
+          {
+              stories.map((story, index) => {
+                return  <Fragment key={index}>
+                          <li className="list-group-item mb-0">
+                            <div className="item">
+                              <h4 className="title mb-0">
+                                <NavLink to={`/stories/${story.slugName}`} title={story.name}>{story.name}</NavLink>
+                              </h4>
+                              <div className="view">
+                                <strong className="mr-2">{story.view}</strong>
+                                Truy cập
+                              </div>
+                            </div>
+                          </li>
+                        </Fragment>
+              })
+          }
           </ul>
         </div>
       </div>

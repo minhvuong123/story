@@ -81,19 +81,19 @@ class Manager extends Component {
             <div className="row">
               <div className="col-sm-3">
                 <div className="wrap-input100 validate-input mt-3" >
-                  <input className="input100" type="text" name="firstname" placeholder="Tên truyện" />
+                  <input className="input100" type="text" name="name" placeholder="Tên truyện" />
                   <span className="focus-input100" />
                 </div>
               </div>
               <div className="col-sm-3">
                 <div className="wrap-input100 validate-input mt-3 " >
-                  <input className="input100" type="text" name="firstname" placeholder="Tác giả" />
+                  <input className="input100" type="text" name="author" placeholder="Tác giả" />
                   <span className="focus-input100" />
                 </div>
               </div>
               <div className="col-sm-3">
                 <div className="wrap-input100 validate-input mt-3 " >
-                  <input className="input100" type="text" name="firstname" placeholder="Số chương" />
+                  <input className="input100" type="text" name="totalpChaper" placeholder="Số chương" />
                   <span className="focus-input100" />
                 </div>
               </div>

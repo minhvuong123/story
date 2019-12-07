@@ -1,10 +1,15 @@
 .story-detail .story-thumb{
   border-radius: 3px;
-  height: 300px;
+  min-height: 300px;
   background-color: #e0e0e0;
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  display: inline-block;
+  margin: auto;
+}
+.story-detail .story-thumb img{
+  width: 100%;
 }
 .story-detail .story-thumb .thumb-play-opacity{
   position: absolute;

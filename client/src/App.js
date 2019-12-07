@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import Header from './containers/header'
 import Main from './containers/main'
-import PlayDashBoard from './containers/playDashboard'
+import PlayDashBoard from './containers/playDashboard';
 
 import {
   BrowserRouter as Router,
@@ -15,7 +15,6 @@ class App extends Component {
           <Header />
           <Main />
           <PlayDashBoard />
-        
         </Router>
       </Fragment>
     )

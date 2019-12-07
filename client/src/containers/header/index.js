@@ -53,7 +53,7 @@ class Header extends Component {
                     <FaUser />
                   </a>
                   <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <NavLink className="dropdown-item d-flex align-items-center" to="/profile"><FaUser className="mr-2" /> Profile</NavLink>
+                    <NavLink className="dropdown-item d-flex align-items-center" to="/minhvuong"><FaUser className="mr-2" /> Profile</NavLink>
                     <a className="dropdown-item" href="/"><FaSignOutAlt className="mr-1" /> Sign out</a>
                   </div>
                 </div>

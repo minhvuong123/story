@@ -11,6 +11,9 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      slugName: {
+        type: Sequelize.STRING
+      },
       author: {
         type: Sequelize.STRING
       },
@@ -22,6 +25,9 @@ module.exports = {
       },
       imgThumb: {
         type: Sequelize.STRING
+      },
+      view: {
+        type: Sequelize.INTEGER
       },
       totalChapter: {
         type: Sequelize.INTEGER

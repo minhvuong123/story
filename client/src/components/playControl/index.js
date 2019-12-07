@@ -10,6 +10,7 @@ import { FaRegPlayCircle, FaRegPauseCircle } from 'react-icons/fa';
 class PlayControl extends Component {
   render() {
     const { play, playAudio } = this.props;
+    
     let playBtn =  play ? <FaRegPauseCircle /> : <FaRegPlayCircle />;
     return (
       <div className="col-3 col-sm-3 pl-0 pr-0">

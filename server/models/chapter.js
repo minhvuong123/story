@@ -9,7 +9,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     name: DataTypes.STRING,
     storyID: DataTypes.INTEGER,
-    chapterNumber: DataTypes.INTEGER
+    chapterNumber: DataTypes.INTEGER,
+    audio: DataTypes.STRING
   }, {});
   Chapter.associate = function(models) {
     // associations can be defined here

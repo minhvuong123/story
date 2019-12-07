@@ -4,10 +4,14 @@ import Play from '../../components/play'
 
 // actions
 import { 
+  getPlayRef,
+  changeAudio,
   changePlay, 
   durationAudio, 
   currentTimeAudio,
   getVolume } from '../../redux/actions';
+
+import { apiShare } from '../../constants';
 
 class PlayDashBoard extends Component {
   constructor(props) {
@@ -16,7 +20,8 @@ class PlayDashBoard extends Component {
   }
 
   componentDidMount(){
-    const { durationAudio, currentTimeAudio } = this.props;
+    const { getPlayRef, durationAudio, currentTimeAudio } = this.props;
+
     this.refAudio.current.onloadedmetadata = () => {
       const value = this.refAudio.current.duration;
       durationAudio(value);
@@ -26,21 +31,25 @@ class PlayDashBoard extends Component {
       const currentTime = this.refAudio.current.currentTime;
       currentTimeAudio(currentTime);
     });
+
+    getPlayRef(this.refAudio.current);
   }
 
   playAudio = () => {
     const { play, changePlay } = this.props;
-    const Play = !play; // handle in this component
-    if(Play){
+    if(!play){
       this.refAudio.current.play(); 
+      changePlay(true);
     } else {
       this.refAudio.current.pause();
+      changePlay(false);
     }
-    changePlay();
+    
   }
   
   render() {
     const { 
+      audio,
       play, 
       volume, 
       getVolume, 
@@ -51,8 +60,8 @@ class PlayDashBoard extends Component {
     } = this.props;
     return (
       <Fragment>
-        {/* <audio id="player" ref={this.refAudio} src="https://ia803002.us.archive.org/21/items/DauLaDaiLuc2TH/40_Ch%C6%B0%C6%A1ng%201141-1160%20Dau%20La%20Dai%20Luc%202.mp3" type="audio/mp3" /> */}
-        <audio id="player" ref={this.refAudio} src="https://mp3-320s1-zmp3.zadn.vn/6d2f4d0174469d18c457/4163716586541612268?authen=exp=1575269852~acl=/6d2f4d0174469d18c457/*~hmac=0e8a281cc818b432c28d95652b8a5469" type="audio/mp3" />
+        <audio id="player" ref={this.refAudio} src={`${apiShare}/${audio}`} type="audio/mp3" />
+        {/* <audio id="player" ref={this.refAudio} src="http://localhost:3001/public/uploads/audios/Linh-vu-thien-ha-1.mp3" type="audio/mp3" /> */}
         <Play 
           player={this.refAudio}
           play={play} 
@@ -71,6 +80,7 @@ class PlayDashBoard extends Component {
 }
 
 const mapStateToProps = (state) => ({
+  audio: state.playReducer.audio,
   play: state.playReducer.play,
   duration: state.playReducer.duration,
   currentTime: state.playReducer.currentTime,
@@ -78,7 +88,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  changePlay: () => dispatch(changePlay()),
+  getPlayRef: playRef => dispatch(getPlayRef(playRef)),
+  changePlay: status => dispatch(changePlay(status)),
   durationAudio: value => dispatch(durationAudio(value)),
   currentTimeAudio: value => dispatch(currentTimeAudio(value)),
   getVolume: value => dispatch(getVolume(value)),

@@ -8,15 +8,18 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER
     },
     name: DataTypes.STRING,
+    slugName: DataTypes.STRING,
     author: DataTypes.STRING,
     categoryID: DataTypes.INTEGER,
     imgUrl: DataTypes.STRING,
     imgThumb: DataTypes.STRING,
+    view: DataTypes.INTEGER,
     totalChapter: DataTypes.INTEGER,
     status: DataTypes.STRING
   }, {});
   Story.associate = function(models) {
     // associations can be defined here
+    Story.hasMany(models.Chapter);
   };
 
   Story.getAll = (attributes = [], query = {}, ...options) => 
