@@ -7,7 +7,8 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 
 import {  
-  getStories
+  getStories,
+  getChaptersNew,
 } from '../../redux/actions';
 
 import { api } from '../../constants';
@@ -17,7 +18,7 @@ import './dashboard.css';
 
 class StoryDashBoard extends Component {
   componentDidMount(){
-    const { getStories } = this.props
+    const { getStories, getChaptersNew } = this.props
     axios.post(
             `${api}/story`, 
             {
@@ -32,9 +33,25 @@ class StoryDashBoard extends Component {
           .catch(err => {
             console.log(err);
           })
+
+
+    axios.post(
+            `${api}/chapter/new`, 
+            {
+              page: 1,
+              limit: 10
+            }
+          )
+          .then(res => {
+            const chapters = res.data.chapters;
+            getChaptersNew(chapters);
+          })
+          .catch(err => {
+            console.log(err);
+          })
   }
   render() {
-    const { stories } = this.props;
+    const { stories, chapterNews } = this.props;    
     return (
       <Fragment>
           {
@@ -42,8 +59,8 @@ class StoryDashBoard extends Component {
             &&  stories.length 
             &&  <Fragment>
                   <Recommended stories={stories} />
-                  <NewUpdate stories={stories} />
-                  <NewComplete />
+                  <NewUpdate chapters={chapterNews} />
+                  <NewComplete stories={stories} />
                 </Fragment> 
           }
       </Fragment>
@@ -52,11 +69,13 @@ class StoryDashBoard extends Component {
 }
 
 const mapStateToProps = state => ({
-  stories: state.storyReducer.stories
+  stories: state.storyReducer.stories,
+  chapterNews: state.storyReducer.chapterNews,
 })
 
 const mapDispatchToProps = dispatch => ({
-  getStories: stories => dispatch(getStories(stories))
+  getStories: stories => dispatch(getStories(stories)),
+  getChaptersNew: chapters => dispatch(getChaptersNew(chapters)),
 })
 
 export default connect(

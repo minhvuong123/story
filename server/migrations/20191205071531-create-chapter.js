@@ -20,6 +20,12 @@ module.exports = {
       audio: {
         type: Sequelize.STRING
       },
+      timeDuration: {
+        type: Sequelize.INTEGER
+      },
+      status: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

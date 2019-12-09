@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import StoryDashBoard from '../storyDashboard';
 import StoryDetail from '../../components/storyDetail';
-import Stories from '../../components/stories';
+import Stories from '../stories';
 import Login from '../../users/login';
 import Register from '../../users/register';
 
 import {
   Switch,
   Route,
-  withRouter
 } from "react-router-dom";
 
 import "./main.css";
@@ -26,8 +25,7 @@ class Main extends Component {
           <Switch location={location}>
             <Route exact path="/" component={StoryDashBoard} />
             <Route path="/home" component={StoryDashBoard} />
-            <Route path="/category" component={Stories} />
-            <Route path="/category/:catName" component={StoryDetail} />
+            <Route path="/category/:catName" component={Stories} />
             <Route path="/stories/:slug" component={StoryDetail} />
             <Route path="/manager" component={Manager} />
             <Route path="/login" component={Login} />
@@ -40,4 +38,4 @@ class Main extends Component {
   }
 }
 
-export default withRouter(Main);
+export default Main;

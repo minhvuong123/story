@@ -10,10 +10,21 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     storyID: DataTypes.INTEGER,
     chapterNumber: DataTypes.INTEGER,
-    audio: DataTypes.STRING
+    audio: DataTypes.STRING,
+    timeDuration: DataTypes.INTEGER,
+    status: DataTypes.STRING,
+    createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE
+    }
   }, {});
   Chapter.associate = function(models) {
     // associations can be defined here
+    Chapter.belongsTo(models.Story);
   };
 
   Chapter.getAll = (attributes = [], query = {}, ...options) => 

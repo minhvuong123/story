@@ -12,11 +12,11 @@ class Login extends Component {
           <span className="login100-form-title p-b-25">
             Sign In
           </span>
-          <a href="#" className="btn-face">
+          <a href="/" className="btn-face">
             <i className="fa fa-facebook-official" />
             Facebook
           </a>
-          <a href="#" className="btn-google">
+          <a href="/" className="btn-google">
             <img src="assets/images/icons/icon-google.png" alt="GOOGLE" />
             Google
           </a>

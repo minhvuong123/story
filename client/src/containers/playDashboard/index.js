@@ -5,7 +5,6 @@ import Play from '../../components/play'
 // actions
 import { 
   getPlayRef,
-  changeAudio,
   changePlay, 
   durationAudio, 
   currentTimeAudio,
@@ -60,8 +59,7 @@ class PlayDashBoard extends Component {
     } = this.props;
     return (
       <Fragment>
-        <audio id="player" ref={this.refAudio} src={`${apiShare}/${audio}`} type="audio/mp3" />
-        {/* <audio id="player" ref={this.refAudio} src="http://localhost:3001/public/uploads/audios/Linh-vu-thien-ha-1.mp3" type="audio/mp3" /> */}
+        <audio id="player" ref={this.refAudio} src={`${audio ? apiShare+'/'+audio : ''} `} type="audio/mp3" />
         <Play 
           player={this.refAudio}
           play={play} 

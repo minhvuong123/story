@@ -8,10 +8,10 @@ class FormSearch extends Component {
 
     return (
       <div className="form-sort d-flex justify-content-center">
-        <div className="sort sort-time">
+        {/* <div className="sort sort-time">
           <IoIosTimer />
           <span className="ml-2">Thời gian cập nhật</span>
-          </div>
+        </div> */}
         <div className="sort sort-view mt-3 mt-sm-3 mt-lg-0">
           <IoIosEye />
           <span className="ml-2">Lượt xem</span>

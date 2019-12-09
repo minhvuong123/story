@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { NavLink } from "react-router-dom";
 
-import { IoIosArrowForward, IoIosArrowDown } from 'react-icons/io';
+import { IoIosArrowForward } from 'react-icons/io';
 
 
 import "./navigation.css";
@@ -12,11 +12,12 @@ class Header extends Component {
     e.preventDefault();
   }
   render() {
+    const { categories } = this.props;
     return (
       <div className="col-sm-12 pl-0 pr-0 order-3 order-sm-0">
         <nav className="navbar navbar-expand-lg navbar-light bg-default pl-0 pr-0">
           <div className=" navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
+            <div className="navbar-nav flex-row">
               <div className="nav-item">
                 <NavLink className="nav-link active" to="/">Home</NavLink>
               </div>
@@ -29,28 +30,16 @@ class Header extends Component {
                   Thể loại <IoIosArrowForward className="d-inline-block d-sm-none icon" />
                 </NavLink>
                 <ul className="row nav-category-list">
-                    <li className="col-sm-2">
-                      <NavLink to="/category/tien-hiep" className="nav-category-item nav-link">Tiên Hiệp</NavLink>
-                    </li>
-                    <li className="col-sm-2">
-                      <NavLink to="/category/kiem-hiep" className="nav-category-item nav-link">Kiếm Hiệp</NavLink>
-                    </li>
-                    <li className="col-sm-2">
-                      <NavLink to="/category/do-thi" className="nav-category-item nav-link">Đô Thị</NavLink>
-                    </li>
-                    <li className="col-sm-2">
-                      <NavLink to="/category/huyen-ao" className="nav-category-item nav-link">Huyền Ảo</NavLink>
-                    </li>
-                    <li className="col-sm-2">
-                      <NavLink to="/category/ngon-tinh" className="nav-category-item nav-link">Ngôn Tình</NavLink>
-                    </li>
-                    <li className="col-sm-2">
-                      <NavLink to="/category/di-nang" className="nav-category-item nav-link">Dị Năng</NavLink>
-                    </li>
-                    <li className="col-sm-2">
-                      <NavLink to="/category/di-gioi" className="nav-category-item nav-link">Dị Giới</NavLink>
-                    </li>
-                  </ul>
+                   {
+                     categories.map(category => {
+                       return  <Fragment key={category.id}>
+                                <li className="col-sm-2">
+                                  <NavLink to={`/category/${category.slugName}`} className="nav-category-item nav-link">{category.name}</NavLink>
+                                </li>
+                              </Fragment>
+                     })
+                   }
+                </ul>
               </div>
               <div className="nav-item">
                 <NavLink className="nav-link active" to="/manager">Quản lý</NavLink>

@@ -98,12 +98,12 @@
   margin-top: 1px;
 }
 
-.story-detail .content .info .name a{
+.story-detail .content .info .name span{
   display: inline-block;
   width: 100%;
   color: #65509e;
 }
-.story-detail .content .info .name a:hover{
+.story-detail .content .info .name span:hover{
   color: #815fdd;
 }
 
@@ -279,6 +279,7 @@
   border-radius: 999px;
   width: 120px;
   margin-top: 20px;
+  margin: auto;
 }
 
 .z-btn:hover{

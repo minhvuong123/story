@@ -15,13 +15,20 @@ const {
 const { handleSuccess, handleError } = require('../../helpers/response');
 
 
-const upload = require('../../helpers/upload');
+const uploadImg = require('../../helpers/upload');
 
 
-Router.post('/upload', upload.array('imgUrl', 12), (req, res) => {
-  console.log(req.file);
-  res.send('abc')
-})
+// Router.post('/upload', uploadImg.fields([{name: 'imgUrl'}, {name: 'imgThumb'}]), (req, res) => {
+//   try {
+//     console.log(req.files.imgUrl[0].filename);
+//   } catch (error) {
+//     handleError(res, { code: 400, msg: "Data is error" });
+//   }
+//   // if(!req.files.imgUrl[0].filename && req.files.imgThumb[0].filename){
+//   //   handleError(res, { code: 400, msg: "Data is error!" });
+//   // }
+//   // handleSuccess(res, { stories: 'abc' });
+// })
 
 
 Router.post('/', async (req, res) => {
@@ -35,7 +42,7 @@ Router.post('/', async (req, res) => {
 
         const offset = (page - 1) * limit;
         
-        const stories = await StoryModel.getAll( [], {}, { offset, limit } );
+        const stories = await StoryModel.getAll( [], { include: [{ model: CategoryModel}] }, { offset, limit } );
 
         handleSuccess(res, { stories });
     } catch (err) {
@@ -43,11 +50,35 @@ Router.post('/', async (req, res) => {
     }
 })
 
+Router.post('/category', async (req, res) => {
+  try {
+      const { page, limit, slugName } = req.body;
+      console.log(slugName);
+      
+
+      if(!page || !limit) {
+          handleError(res, { code: 400, msg: "Invalid values" });
+          return;
+      }
+      
+      const category = await CategoryModel.getAll(['id'], {where: {slugName}});
+      const categoryID = category[0].dataValues.id;
+      console.log(categoryID);
+      
+
+      const offset = (page - 1) * limit;
+      
+      const stories = await StoryModel.getAll( [], { where: { categoryID }, include: [{ model: CategoryModel}] }, { offset, limit } );
+
+      handleSuccess(res, { stories });
+  } catch (err) {
+      handleError(res, { code: 500, msg: "Server is error" });
+  }
+})
+
 Router.post('/detail', async (req, res) => {
   try {
       const { slugName, page, limit } = req.body;
-      console.log(slugName, page, limit);
-      
       
       if(!slugName) {
           handleError(res, { code: 400, msg: "Invalid values" });
@@ -70,36 +101,38 @@ Router.post('/detail', async (req, res) => {
   }
 })
 
-Router.post('/add', async (req, res) => {
-  try {
-    const { ...storyRequest } = req.body;
-    const { categoryID } = storyRequest;
+Router.post('/add', uploadImg.fields([{name: 'imgUrl'}, {name: 'imgThumb'}]), async (req, res) => {
+  console.log(req.body, req.files.imgUrl[0], req.files.imgThumb[0]);
+  
+  // try {
+  //   const { ...storyRequest } = req.body;
+  //   const { categoryID } = storyRequest;
 
-    if( !storyRequest ) {
-      handleError(res, { code: 400, msg: "Invalid values" });
-      return;
-    }
+  //   if( !storyRequest ) {
+  //     handleError(res, { code: 400, msg: "Invalid values" });
+  //     return;
+  //   }
 
-    const categoryCheck = await CategoryModel.getAll([], { where: { id: categoryID } });
+  //   const categoryCheck = await CategoryModel.getAll([], { where: { id: categoryID } });
 
-    if(categoryCheck.length){
+  //   if(categoryCheck.length){
 
-      const storyEntity = {...storyRequest};
+  //     const storyEntity = {...storyRequest};
 
-      const story = await StoryModel.add(storyEntity);   
+  //     const story = await StoryModel.add(storyEntity);   
 
-      if(!story) {
-        handleError(res, { code: 400, msg: "Creating position is failed" });
-        return;
-      }
+  //     if(!story) {
+  //       handleError(res, { code: 400, msg: "Creating position is failed" });
+  //       return;
+  //     }
 
-      handleSuccess(res, { story });
-    } else {
-      handleError(res, { code: 400, msg: "CategoryID is not found" });
-    }
-  } catch (err) {
-    handleError(res, { code: 500, msg: "Server is error" });
-  }
+  //     handleSuccess(res, { story });
+  //   } else {
+  //     handleError(res, { code: 400, msg: "CategoryID is not found" });
+  //   }
+  // } catch (err) {
+  //   handleError(res, { code: 500, msg: "Server is error" });
+  // }
 })
 
 Router.delete('/delete', async (req, res) => {

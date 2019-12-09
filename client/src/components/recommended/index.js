@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import { NavLink } from 'react-router-dom';
- 
+
 import { apiShare } from '../../constants';
+
+import { NavLink } from 'react-router-dom';
 
 import { IoIosStar } from 'react-icons/io';
 
@@ -49,119 +50,56 @@ class Recommended extends Component {
         <div className="col-sm-4 recomended">
           <h4>Đề cử tháng</h4>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item mb-0 p-0">
-              <div className="content d-flex">
-                <div className="index start-1 p-2">
-                  <IoIosStar />
-                </div>
-                <div className="info info-best pl-5 flex-grow-1 d-flex">
-                  <a href="/" className="flex-grow-1 pt-2 pb-2">Vũ Thần Chúa Tể</a>
-                  <p className="view mb-0">Đề cử : <span>150</span></p>
-                  <div className="extra-info">
-                    <p className="mb-0">
-                      Thể loại: 
-                      <a href="https://truyenaudiocv.com/danh-sach/category/tien-hiep" className="pl-1"> Tiên Hiệp</a>,
-                      <a href="https://truyenaudiocv.com/danh-sach/category/huyen-ao" > Huyền Ảo</a>,
-                      <a href="https://truyenaudiocv.com/danh-sach/category/trong-sinh" > Trọng Sinh</a>
-                    </p>
-                    <p>Tác giả: Ám Ma sư</p>
-                  </div>
-                </div>
-                <div className="thumb">
-                  <div className="book-cover">
-                    <a className="book-cover-link" href="https://truyenaudiocv.com/vu-than-chua-te" title="Vũ Thần Chúa Tể">
-                      <img src="https://truyenaudiocv.com/uploads/manga/vu-than-chua-te/cover/cover_thumb.jpg" alt="Vũ Thần Chúa Tể" />
-                    </a>
-                    <span className="book-cover-shadow"></span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item mb-0 p-0">
-              <div className="content d-flex">
-                <div className="index start-2 p-2">
-                  <IoIosStar />
-                </div>
-                <div className="info pl-5 flex-grow-1 d-flex">
-                  <a href="/" className="flex-grow-1 pt-2 pb-2">Vũ Luyện Điên Phong</a>
-                  <span className="view pt-2 pb-2">120</span>
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item mb-0 p-0">
-              <div className="content d-flex">
-                <div className="index start-3 p-2">
-                  <IoIosStar />
-                </div>
-                <div className="info pl-5 flex-grow-1 d-flex">
-                  <a href="/" className="flex-grow-1 pt-2 pb-2">Cực Phẩm Tiên Đế Tại Đô Thị</a>
-                  <span className="view pt-2 pb-2">100</span>
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item mb-0 p-0">
-              <div className="content d-flex">
-                <div className="index start p-2">4</div>
-                <div className="info pl-5 flex-grow-1 d-flex">
-                  <a href="/" className="flex-grow-1 pt-2 pb-2">Siêu Thần Yêu Nghiệt</a>
-                  <span className="view pt-2 pb-2">80</span>
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item mb-0 p-0">
-              <div className="content d-flex">
-                <div className="index start p-2">5</div>
-                <div className="info pl-5 flex-grow-1 d-flex">
-                  <a href="/" className="flex-grow-1 pt-2 pb-2">Yêu Long Cổ Đế</a>
-                  <span className="view pt-2 pb-2">60</span>
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item mb-0 p-0">
-              <div className="content d-flex">
-                <div className="index start p-2">6</div>
-                <div className="info pl-5 flex-grow-1 d-flex">
-                  <a href="/" className="flex-grow-1 pt-2 pb-2">Đế tôn</a>
-                  <span className="view pt-2 pb-2">40</span>
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item mb-0 p-0">
-              <div className="content d-flex">
-                <div className="index start p-2">7</div>
-                <div className="info pl-5 flex-grow-1 d-flex">
-                  <a href="/" className="flex-grow-1 pt-2 pb-2">Đế bá</a>
-                  <span className="view pt-2 pb-2">35</span>
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item mb-0 p-0">
-              <div className="content d-flex">
-                <div className="index start p-2">8</div>
-                <div className="info pl-5 flex-grow-1 d-flex">
-                  <a href="/" className="flex-grow-1 pt-2 pb-2">Vô Tận Đan Điền</a>
-                  <span className="view pt-2 pb-2">30</span>
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item mb-0 p-0">
-              <div className="content d-flex">
-                <div className="index start p-2">9</div>
-                <div className="info pl-5 flex-grow-1 d-flex">
-                  <a href="/" className="flex-grow-1 pt-2 pb-2">Vô Thượng Sát Thần</a>
-                  <span className="view pt-2 pb-2">25</span>
-                </div>
-              </div>
-            </li>
-            <li className="list-group-item mb-0 p-0">
-              <div className="content d-flex">
-                <div className="index start p-2">10</div>
-                <div className="info pl-5 flex-grow-1 d-flex">
-                  <a href="/" className="flex-grow-1 pt-2 pb-2">Toàn Chức Pháp Sư</a>
-                  <span className="view pt-2 pb-2">20</span>
-                </div>
-              </div>
-            </li>
+            {
+              stories 
+              && stories.length 
+              && stories.map((story, index) => {
+                if(index === 0){
+                  return  <Fragment key={index}>
+                            <li className="list-group-item mb-0 p-0">
+                              <div className="content d-flex">
+                                <div className="index start-1 p-2">
+                                  <IoIosStar />
+                                </div>
+                                <div className="info info-best pl-5 flex-grow-1 d-flex">
+                                  <NavLink to={`/stories/${story.slugName}`} className="flex-grow-1 pt-2 pb-2">{story.name}</NavLink>
+                                  {/* <p className="view mb-0">Đề cử : <span>150</span></p> */}
+                                  <div className="extra-info">
+                                    <p className="mb-0">
+                                      Thể loại: 
+                                      <NavLink to={`/stories/${story.slugName}`} className="pl-1">{story.Category.name}</NavLink>
+                                    </p>
+                                    <p>Tác giả: {story.author}</p>
+                                  </div>
+                                </div>
+                                <div className="thumb">
+                                  <div className="book-cover">
+                                    <NavLink className="book-cover-link" to={`/stories/${story.slugName}`} title={story.name}>
+                                      <img src={`${apiShare}/${story.imgUrl}`} alt={story.name} />
+                                    </NavLink>
+                                    <span className="book-cover-shadow"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </Fragment>
+                } else {
+                  return  <Fragment key={index}>
+                            <li className="list-group-item mb-0 p-0">
+                              <div className="content d-flex">
+                                <div className="index start-2 p-2">
+                                  <IoIosStar />
+                                </div>
+                                <div className="info pl-5 flex-grow-1 d-flex">
+                                  <NavLink to={`/stories/${story.slugName}`} className="flex-grow-1 pt-2 pb-2">{story.name}</NavLink>
+                                  {/* <span className="view pt-2 pb-2">120</span> */}
+                                </div>
+                              </div>
+                            </li>
+                          </Fragment>
+                }
+              })
+            }
           </ul>
         </div>
         <div className="col-sm-4 access">

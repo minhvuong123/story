@@ -1,3 +1,18 @@
+.table{
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.table th, .table td{
+  font-size: 12px;
+}
+
+.table .thead-dark th{
+  font-size: 12px;
+  background-color: #815fdd !important;
+  border-color: #815fdd !important;
+}
+
 .custom-select{
   border-radius: 10px !important;
   background-color: #f7f7f7 !important;
@@ -11,4 +26,48 @@
 
 .file{
   font-size: 14px;
+}
+
+.story-form{
+  display: none;
+}
+
+.story-form.active{
+  display: inline-block;
+}
+
+.btn-add{
+  background-color: #dee2e6 !important;
+  border: 1px solid #815fdd !important;
+  color: #000 !important;
+  float: right;
+}
+
+.btn-add:hover{
+  background-color: #815fdd !important;
+  color: #fff !important;
+}
+
+.btn-close{
+  line-height: 0 !important;
+  background-color: #815fdd !important;
+  font-size: 28px !important;
+  padding: 0 !important;
+  color: #fff !important;
+}
+
+.btn-close:hover{
+  background-color: #65509e !important;
+}
+
+.btn-detail{
+  line-height: 0 !important;
+  background-color: #a55eea !important;
+  font-size: 28px !important;
+  padding: 0 !important;
+  color: #fff !important;
+}
+
+.btn-detail:hover{
+  background-color: #8854d0 !important;
 }

@@ -101,6 +101,8 @@ class StoryDetail extends Component {
         })
         .catch(() => {
           console.log("playback prevented");
+          playRef.play();
+          changePlay(true);
         });
     }
   }
@@ -157,13 +159,13 @@ class StoryDetail extends Component {
                   </div>
                   <h4 className="mt-3 text-center">Theo Hỗn Độn Thể Bắt Đầu</h4>
                   <div className="text-center mt-3">
-                    <a className="z-btn">
+                    <div className="z-btn">
                       <span style={{fontSize: '20px'}}>
                         {
                           play ? <IoMdStats /> : <IoIosPlay />
                         }
                       </span> Tiếp tục phát
-                    </a>
+                    </div>
                   </div>
                   <div className="text-center mt-3" style={{fontSize: '13px', color: '#999'}}>14 audio truyện - 1 giờ 6 phút</div>
                 </div>
@@ -177,7 +179,7 @@ class StoryDetail extends Component {
                                       <li className="list-group-item mb-0 pr-0 pl-0 pb-2 pt-2">
                                         <div className="content d-flex align-items-center">
                                           <div className="index p-2">{chapter.chapterNumber}</div>
-                                          <a  className="thumb" 
+                                          <div  className="thumb"
                                               title="Theo Hỗn Độn Thể Bắt Đầu">
                                             <img className="img-responsive" src={`${apiShare}/${story.imgThumb}`} alt="Theo Hỗn Độn Thể Bắt Đầu" />
                                             {
@@ -191,13 +193,13 @@ class StoryDetail extends Component {
                                                   <IoIosPlay />
                                                 </div>
                                             }
-                                          </a>
+                                          </div>
                                           <div className="info flex-column">
                                             <h2 className="name mb-0 pr-2 pl-2">
-                                              <a  href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau" 
+                                              <span
                                                   title={story.name}>
                                                   {chapter.name ? chapter.name : story.name + ' ' + chapter.chapterNumber}
-                                              </a>
+                                              </span>
                                             </h2>
                                           <div className="author pr-2 pl-2">{story.author}</div>
                                           </div>

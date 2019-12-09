@@ -38,7 +38,7 @@
   color: #815fdd;
 }
 
-.stories .content .info .name{
+.stories .content .info .author{
   flex-grow: 1;
   white-space: normal;
   text-overflow: ellipsis;
@@ -47,18 +47,18 @@
   color: #000;
 }
 
-.stories .content .info .author{
-  width: 20%;
+.stories .content .info .chap{
+  /* width: 20%; */
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.stories .content .info .author a{
+.stories .content .info .chap a{
   color: #65509e;
 }
 
-.stories .content .info .author a:hover{
+.stories .content .info .chap a:hover{
   color: #815fdd;
 }
 
@@ -130,11 +130,11 @@
     width: 100%;
     font-size: 13px;
   }
-  .stories .content .info .name{
+  .stories .content .info .author{
     width: 100%;
     font-size: 12px;
   }
-  .stories .content .info .author{
+  .stories .content .info .chap{
     width: 100%;
     font-size: 10px;
   }
@@ -163,11 +163,11 @@
   .stories .content .info .title{
     font-size: 19px;
   }
-  .stories .content .info .name{
+  .stories .content .info .author{
     width: 100%;
     font-size: 17px;
   }
-  .stories .content .info .author{
+  .stories .content .info .chap{
     width: 100%;
     font-size: 15px;
   }

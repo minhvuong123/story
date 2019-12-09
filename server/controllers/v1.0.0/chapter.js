@@ -31,6 +31,29 @@ Router.post('/', async (req, res) => {
     }
 })
 
+Router.post('/new', async (req, res) => {
+  try {
+      const { page, limit } = req.body;
+
+      if(!page || !limit) {
+          handleError(res, { code: 400, msg: "Invalid values" });
+          return;
+      }
+      const offset = (page - 1) * limit;
+      
+      const chapters = await ChapterModel.getAll( [], {
+                                                        where: {status: 'new'},
+                                                        include: [{
+                                                          model: StoryModel
+                                                        }]
+                                                      }, { offset, limit } );
+
+      handleSuccess(res, { chapters });
+  } catch (err) {
+      handleError(res, { code: 500, msg: "Server is error" });
+  }
+})
+
 Router.post('/add', async (req, res) => {
   try {
     const { ...chapterRequest } = req.body;

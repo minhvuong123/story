@@ -10,6 +10,16 @@ const {Category: CategoryModel} = require('../../models'); // remember define to
 // response 
 const { handleSuccess, handleError } = require('../../helpers/response');
 
+Router.get('/', async (req, res) => {
+  try {
+      const categories = await CategoryModel.getAll( [], {});
+
+      handleSuccess(res, { categories });
+  } catch (err) {
+      handleError(res, { code: 500, msg: "Server is error" });
+  }
+})
+
 Router.post('/', async (req, res) => {
     try {
         const { page, limit } = req.body;

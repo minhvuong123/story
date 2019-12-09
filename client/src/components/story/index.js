@@ -1,20 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+import { NavLink } from 'react-router-dom';
+
+import { apiShare } from '../../constants';
+
 import { FaRegPlayCircle } from 'react-icons/fa';
 
 import "./story.css"
 
 class Story extends Component {
   render() {
+    const { story } = this.props;
     return (
       <div className="col-story">
         <div className="col-story-link">
-          <a href="/">
-            <img src="https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/1/e/2/8/1e28c2bbd99e433b3bc50c12b8e2f76a.jpg" alt="" />
-          </a>
-          <div className="story-player">
-            <FaRegPlayCircle />
-          </div>
-          <div className="col-story-info">Name 1</div>
+          <NavLink to={`/stories/${story.slugName}`} title={story.name}>
+            <img src={`${apiShare}/${story.imgUrl}`} alt={story.name} />
+        
+            <div className="story-player">
+              <FaRegPlayCircle />
+            </div>
+            </NavLink>
+            <div className="col-story-info" title={story.name}>{story.name}</div>
         </div>
       </div>
     )

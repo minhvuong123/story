@@ -15,11 +15,20 @@ module.exports = (sequelize, DataTypes) => {
     imgThumb: DataTypes.STRING,
     view: DataTypes.INTEGER,
     totalChapter: DataTypes.INTEGER,
-    status: DataTypes.STRING
+    status: DataTypes.STRING,
+    createdAt: {
+      allowNull: false,
+      type: DataTypes.DATE
+    },
+    updatedAt: {
+      allowNull: false,
+      type: DataTypes.DATE
+    }
   }, {});
   Story.associate = function(models) {
     // associations can be defined here
     Story.hasMany(models.Chapter);
+    Story.belongsTo(models.Category);
   };
 
   Story.getAll = (attributes = [], query = {}, ...options) => 
