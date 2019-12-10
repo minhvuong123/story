@@ -19,6 +19,13 @@ import { IoIosList, IoMdGrid } from 'react-icons/io'
 import './stories.css';
 
 class Stories extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      totalPaginate: 0,
+    }
+  }
+  
   componentDidMount(){
     const { catName } = this.props.match.params;
     axios.post(
@@ -32,7 +39,11 @@ class Stories extends Component {
     .then(res => {
       const { getStoryCategories } = this.props;
       const stories = res.data.stories;
+      const totalPaginate = res.data.totalPaginate;
       getStoryCategories(stories);
+      this.setState({
+        totalPaginate
+      })
     })
     .catch(err => {
       console.log(err);
@@ -53,7 +64,11 @@ class Stories extends Component {
       .then(res => {
         const { getStoryCategories } = this.props;
         const stories = res.data.stories;
+        const totalPaginate = res.data.totalPaginate;
         getStoryCategories(stories);
+        this.setState({
+          totalPaginate
+        })
       })
       .catch(err => {
         console.log(err);
@@ -61,14 +76,17 @@ class Stories extends Component {
     }
   }
   render() {
+    const { totalPaginate } = this.state;
     const { categories, storyCategories } = this.props;
     const { catName } = this.props.match.params;
+    // console.log('categories: ', storyCategories);
+    
     return (
       <div className="row">
         <div className="col-sm-8 stories">
           <Breadcrumb />
           <div className="pt-4 pb-4 pl-4 pr-4 pt-sm-4 pb-sm-4 pl-sm-4 pr-sm-4  border-bottom" style={{background: 'rgb(242, 242, 242)'}}>
-            <FormSearch />
+            <FormSearch catName={catName} />
             <div className="d-none d-lg-flex justify-content-center mt-3">
               <span className="view-type"><IoIosList /></span>
               <span className="view-type ml-3"><IoMdGrid /></span>
@@ -95,7 +113,7 @@ class Stories extends Component {
                                     </h2>
                                     <div className="author pr-2 pl-2">{story.author}</div>
                                     <div className="chap pr-2 pl-2">
-                                      <a href="https://truyenaudiocv.com/huyen-huyen-theo-hon-don-the-bat-dau/listen?i=184">Chương 0185 Thái Thượng Đạo Tổ</a>
+                                      <NavLink to={`/stories/${story.slugName}`}>{story.totalChapter} chương</NavLink>
                                       &nbsp;
                                     </div>
                                     {/* <div className="time pr-2 pl-2">
@@ -108,25 +126,28 @@ class Stories extends Component {
               }): ""
             } 
           </ul>
-          <Pagination
-              previousLabel={<span className="lnr lnr-chevron-left"></span>}
-              previousClassName={'page-item mt-2'}
-              previousLinkClassName={'page-link'}
-              nextClassName={'page-item mt-2'}
-              nextLinkClassName={'page-link'}
-              nextLabel={<span className="lnr lnr-chevron-right"></span>}
-              breakLabel={'...'}
-              breakClassName={'break-me mt-2 disabled'}
-              pageCount={20}
-              marginPagesDisplayed={2}
-              pageRangeDisplayed={2}
-              onPageChange={this.handlePageClick}
-              containerClassName={'pagination mt-4 justify-content-center flex-wrap'}
-              subContainerClassName={'pages pagination'}
-              activeClassName={'active'}
-              pageClassName={'page-item mt-2'}
-              pageLinkClassName={'page-link'}
-            />
+          {
+            totalPaginate 
+            ?  <Pagination
+                previousLabel={<span className="lnr lnr-chevron-left"></span>}
+                previousClassName={'page-item mt-2'}
+                previousLinkClassName={'page-link'}
+                nextClassName={'page-item mt-2'}
+                nextLinkClassName={'page-link'}
+                nextLabel={<span className="lnr lnr-chevron-right"></span>}
+                breakLabel={'...'}
+                breakClassName={'break-me mt-2 disabled'}
+                pageCount={totalPaginate}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={2}
+                onPageChange={this.handlePageClick}
+                containerClassName={'pagination mt-4 justify-content-center flex-wrap'}
+                subContainerClassName={'pages pagination'}
+                activeClassName={'active'}
+                pageClassName={'page-item mt-2'}
+                pageLinkClassName={'page-link'}
+              /> : "Not found Story"
+          }  
         </div>
         <div className="col-sm-4 mt-4 pt-2">
           <div className="stories-filter">
@@ -138,11 +159,11 @@ class Stories extends Component {
                     && categories.length
                     && categories.map(category => {
                       if(category.slugName === catName){
-                        return  <Fragment>
+                        return  <Fragment key={category.id}>
                                   <NavLink to={`/category/${category.slugName}`}><span className="active">{category.name}</span></NavLink>
                                 </Fragment>
                       } else {
-                        return  <Fragment>
+                        return  <Fragment key={category.id}>
                                   <NavLink to={`/category/${category.slugName}`}><span>{category.name}</span></NavLink>
                                 </Fragment>
                       }

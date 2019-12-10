@@ -25,7 +25,7 @@ class Recommended extends Component {
             </ol>
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img className="d-block w-100" src="https://truyenaudiocv.com/uploads/manga/linh-vu-thien-ha/cover/cover_250x350.jpg" alt="First slide" />
+                <img className="d-block w-100" src="http://localhost:3001/public/uploads/images/cover_linh_vu_thien_ha.jpg" alt="First slide" />
                 <a href="/" className="title">Linh vũ thiên hạ</a>
                 <p>Nhóm dịch: Sói Già
                   Đả tự: Bựa Thập Ngũ BLH
@@ -33,13 +33,13 @@ class Recommended extends Component {
                   </p>
               </div>
               <div className="carousel-item ">
-                <img className="d-block w-100" src="https://truyenaudiocv.com/uploads/manga/cuc-pham-tien-de-tai-do-thi/cover/cover_250x350.jpg" alt="Second slide" />
+                <img className="d-block w-100" src="http://localhost:3001/public/uploads/images/cover_dai_chua_te.jpg" alt="Second slide" />
                 <a href="/" className="title">Vũ Thần Chúa Tể</a>
                 <p>Thiên Vũ Đại Lục một đại truyền kỳ Tần Trần , bởi vì bạn chí cốt phản bội ngoài ý muốn ngã xuống Vũ Vực . Ba tră...
                   </p>
               </div>
               <div className="carousel-item ">
-                <img className="d-block w-100" src="https://truyenaudiocv.com/uploads/manga/vu-than-chua-te/cover/cover_250x350.jpg" alt="Third slide" />
+                <img className="d-block w-100" src="http://localhost:3001/public/uploads/images/cover_doc_ton_tam_gioi.jpg" alt="Third slide" />
                 <a href="/" className="title">Độc tôn tam giới</a>
                 <p>Cửu Kiếp Tiên Đế, đô thị trọng sinh!Một địa cầu, một cái Tiên giới, đây chính là thiên địa cách biệt a!“Kinh Nguyệt Đan, chuyê...
                   </p>

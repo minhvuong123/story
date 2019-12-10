@@ -23,7 +23,7 @@ class Play extends Component {
     return (
       <div className="media-play">
         <div className="container pl-0 pr-0">
-          <div className="row align-items-center">
+          <div className="row align-items-center justify-content-center">
             <PlayControl 
               player={player} 
               play={play} 
@@ -40,7 +40,7 @@ class Play extends Component {
               currentTimeAudio={currentTimeAudio}
               volume={volume}
               getVolume={getVolume}/>
-            <PlayList />
+            {/* <PlayList /> */}
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@
   font-size: 14px;
   padding: 0 10px;
   color: #fff;
+  position: relative;
 }
 
 .sort.sort-time{
@@ -59,6 +60,31 @@
 
 .sort.sort.sort-search button:hover{
   background-color: #65509e;
+}
+
+.sort .sort-option{
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 10;
+  background: #ffffff;
+  border: 1px solid #815fdd;
+}
+.sort .sort-option a{
+  padding: 5px 15px;
+  color: #000;
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid #d2d1d5;
+  text-decoration: none;
+}
+.sort .sort-option a:hover{
+  background-color: #815fdd;
+  color: #fff;
+  cursor: pointer;
+}
+.sort .sort-option a:last-child{
+  border-bottom: none;
 }
 
 @media (max-width: 768px){

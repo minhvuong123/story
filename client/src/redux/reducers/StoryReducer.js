@@ -5,6 +5,7 @@ import {
   GET_CHAPTERS_NEW,
   GET_CATEGORIES,
   GET_STORY_CATEGORIES,
+  GET_PLAY_LIST,
 } from '../actions';
 
 const initState = {
@@ -14,10 +15,13 @@ const initState = {
   chapterNews: [],
   categories: [],
   storyCategories: [],
+  playLists: [],
 }
 
 const storyReducer = (state = initState, action) => {
   switch(action.type){
+    case GET_PLAY_LIST:
+      return {...state, playLists: action.stories}
     case GET_STORY_CATEGORIES:
       return {...state, storyCategories: action.stories}
     case GET_CATEGORIES: 

@@ -11,6 +11,10 @@ import {
 
 import { api, apiShare } from '../../constants';
 
+import fs from 'fs';
+import http from 'https';
+import {downloadsFolder} from 'downloads-folder';
+
 import { IoMdHeartEmpty, IoIosMore, IoIosPlay, IoMdStats } from 'react-icons/io';
 
 import './detail.css';
@@ -65,7 +69,7 @@ class StoryDetail extends Component {
     const { changeAudio, changePlay, playRef } = this.props;
 
     // handle active audio
-    const { chapters } = this.state;
+    const { chapters } = this.props;
     //  reset active all chapter
     chapters.forEach(chapter => {
       chapter.active = false;
@@ -140,6 +144,37 @@ class StoryDetail extends Component {
     })
   }
 
+  download = (url, dest, cb) => {
+    console.log("Abc");
+    
+      dest = dest.replace(/\\/g, '/');
+      console.log(url, dest);
+      
+      // const file = fs.createWriteStream(dest);
+
+      // const request = http.get(url, (response) => {
+      //     // check if response is success
+      //     if (response.statusCode !== 200) {
+      //         return cb('Response status was ' + response.statusCode);
+      //     }
+      //     response.pipe(file);
+      // });
+
+      // // close() is async, call cb after close completes
+      // file.on('finish', () => file.close(cb));
+
+      // // check for request error too
+      // request.on('error', (err) => {
+      //     fs.unlink(dest);
+      //     return cb(err.message);
+      // });
+
+      // file.on('error', (err) => { // Handle errors
+      //     fs.unlink(dest); // Delete the file async. (But we don't check the result) 
+      //     return cb(err.message);
+      // });
+  };
+
   render() {
     const { story, play } = this.props;
     const { chapters, totalPaginate } = this.state;
@@ -157,8 +192,8 @@ class StoryDetail extends Component {
                       }
                     </div>
                   </div>
-                  <h4 className="mt-3 text-center">Theo Hỗn Độn Thể Bắt Đầu</h4>
-                  <div className="text-center mt-3">
+                  <h4 className="mt-3 text-center">{story.name}</h4>
+                  {/* <div className="text-center mt-3">
                     <div className="z-btn">
                       <span style={{fontSize: '20px'}}>
                         {
@@ -166,8 +201,8 @@ class StoryDetail extends Component {
                         }
                       </span> Tiếp tục phát
                     </div>
-                  </div>
-                  <div className="text-center mt-3" style={{fontSize: '13px', color: '#999'}}>14 audio truyện - 1 giờ 6 phút</div>
+                  </div> */}
+                  {/* <div className="text-center mt-3" style={{fontSize: '13px', color: '#999'}}>14 audio truyện - 1 giờ 6 phút</div> */}
                 </div>
                 <div className="col-sm-8">
                   <ul className="list-group">
@@ -206,16 +241,16 @@ class StoryDetail extends Component {
                                           <div className="z-duration pr-2 pl-2 d-none d-sm-inline-block">04:30</div>
                                           <div className="extension">
                                             <ul>
-                                              <li><IoMdHeartEmpty /></li>
-                                              <li className="dropdown">
+                                              {/* <li><IoMdHeartEmpty /></li> */}
+                                              {/* <li className="dropdown">
                                                 <a className="dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                  <IoIosMore />
+                                                  <IoIosMore /> 
                                                 </a>
                                                 <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                                   <a className="dropdown-item" href="/">Thêm vào danh sách phát</a>
-                                                  <a className="dropdown-item" href="/">Tải xuống</a>
+                                                  <a className="dropdown-item" >Tải xuống</a>
                                                 </div>
-                                              </li>
+                                              </li> */}
                                             </ul>
                                           </div>
                                         </div>

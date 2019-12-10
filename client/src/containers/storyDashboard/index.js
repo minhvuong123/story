@@ -57,11 +57,11 @@ class StoryDashBoard extends Component {
           {
             stories 
             &&  stories.length 
-            &&  <Fragment>
+            ?  <Fragment>
                   <Recommended stories={stories} />
                   <NewUpdate chapters={chapterNews} />
                   <NewComplete stories={stories} />
-                </Fragment> 
+                </Fragment> : ""
           }
       </Fragment>
     )

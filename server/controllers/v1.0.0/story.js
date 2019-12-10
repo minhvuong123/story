@@ -1,6 +1,8 @@
 const express = require('express');
 const Router = express.Router();
 
+const Op = require('sequelize').Op;
+
 // generateId
 const generateId = require('../../helpers/generateId');
 
@@ -50,11 +52,9 @@ Router.post('/', async (req, res) => {
     }
 })
 
-Router.post('/category', async (req, res) => {
+Router.post('/search', async (req, res) => {
   try {
-      const { page, limit, slugName } = req.body;
-      console.log(slugName);
-      
+      const { page, limit, slugName, values } = req.body;
 
       if(!page || !limit) {
           handleError(res, { code: 400, msg: "Invalid values" });
@@ -63,14 +63,40 @@ Router.post('/category', async (req, res) => {
       
       const category = await CategoryModel.getAll(['id'], {where: {slugName}});
       const categoryID = category[0].dataValues.id;
-      console.log(categoryID);
+
+      const offset = (page - 1) * limit;
       
+      const stories = await StoryModel.getAll( [], { where: { categoryID, name: {[Op.like]: [`%${values}%`]} } }, { offset, limit } );
+
+      // const storyLegnth = await StoryModel.getAll( [], { where: { categoryID }} );
+      // const totalPaginate = storyLegnth.length;
+    
+      handleSuccess(res, { stories });
+  } catch (err) {
+      handleError(res, { code: 500, msg: "Server is error" });
+  }
+})
+
+Router.post('/category', async (req, res) => {
+  try {
+      const { page, limit, slugName } = req.body;
+
+      if(!page || !limit) {
+          handleError(res, { code: 400, msg: "Invalid values" });
+          return;
+      }
+      
+      const category = await CategoryModel.getAll(['id'], {where: {slugName}});
+      const categoryID = category[0].dataValues.id;
 
       const offset = (page - 1) * limit;
       
       const stories = await StoryModel.getAll( [], { where: { categoryID }, include: [{ model: CategoryModel}] }, { offset, limit } );
 
-      handleSuccess(res, { stories });
+      const storyLegnth = await StoryModel.getAll( [], { where: { categoryID }} );
+      const totalPaginate = storyLegnth.length;
+    
+      handleSuccess(res, { stories, totalPaginate });
   } catch (err) {
       handleError(res, { code: 500, msg: "Server is error" });
   }

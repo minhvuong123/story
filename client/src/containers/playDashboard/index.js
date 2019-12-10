@@ -8,6 +8,7 @@ import {
   changePlay, 
   durationAudio, 
   currentTimeAudio,
+  changeAudio,
   getVolume } from '../../redux/actions';
 
 import { apiShare } from '../../constants';
@@ -20,6 +21,7 @@ class PlayDashBoard extends Component {
 
   componentDidMount(){
     const { getPlayRef, durationAudio, currentTimeAudio } = this.props;
+    
 
     this.refAudio.current.onloadedmetadata = () => {
       const value = this.refAudio.current.duration;
@@ -32,6 +34,12 @@ class PlayDashBoard extends Component {
     });
 
     getPlayRef(this.refAudio.current);
+
+    document.getElementById('player').addEventListener('ended', () => {
+      // console.log("end", chapters[1]);
+      
+      // changeAudio(chapters[1]);
+    }, false);
   }
 
   playAudio = () => {
@@ -55,11 +63,14 @@ class PlayDashBoard extends Component {
       duration, 
       currentTime, 
       durationAudio, 
-      currentTimeAudio 
+      currentTimeAudio,
+      chapters,
     } = this.props;
+    // console.log(chapters);
+    
     return (
       <Fragment>
-        <audio id="player" ref={this.refAudio} src={`${audio ? apiShare+'/'+audio : ''} `} type="audio/mp3" />
+        <audio id="player" ref={this.refAudio} src={`${audio ? apiShare+'/'+ audio : ''} `} type="audio/mp3" />
         <Play 
           player={this.refAudio}
           play={play} 
@@ -83,6 +94,7 @@ const mapStateToProps = (state) => ({
   duration: state.playReducer.duration,
   currentTime: state.playReducer.currentTime,
   volume: state.playReducer.volume,
+  chapters: state.storyReducer.chapters,
 })
 
 const mapDispatchToProps = (dispatch) => ({
@@ -91,6 +103,7 @@ const mapDispatchToProps = (dispatch) => ({
   durationAudio: value => dispatch(durationAudio(value)),
   currentTimeAudio: value => dispatch(currentTimeAudio(value)),
   getVolume: value => dispatch(getVolume(value)),
+  changeAudio: audio => dispatch(changeAudio(audio)),
 })
 
 export default connect(

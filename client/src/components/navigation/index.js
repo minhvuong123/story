@@ -41,9 +41,9 @@ class Header extends Component {
                    }
                 </ul>
               </div>
-              <div className="nav-item">
+              {/* <div className="nav-item">
                 <NavLink className="nav-link active" to="/manager">Quản lý</NavLink>
-              </div>
+              </div> */}
             </div>
           </div>
         </nav>

@@ -58,13 +58,13 @@
 
 @media (max-width: 768px){
   .navbar .navbar-collapse .navbar-nav{
-   flex-direction: row;
+   flex-direction: row !important;
   }
 }
 
 @media (max-width: 426px){
   .navbar .navbar-collapse .navbar-nav{
-    flex-direction: column;
+    flex-direction: column !important;
   }
   .navbar .navbar-collapse .navbar-nav .nav-item{
     border-bottom: 1px solid #eee;

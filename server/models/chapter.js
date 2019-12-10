@@ -27,6 +27,22 @@ module.exports = (sequelize, DataTypes) => {
     Chapter.belongsTo(models.Story);
   };
 
+  Chapter.getMax = (attributes = [], query = {}, ...options) => 
+  new Promise( async (resolve, reject) => {
+    try {
+      const chapters = await Chapter.findAll({ 
+        attributes: [[sequelize.fn('max', sequelize.col('chapterNumber')), 'maxChapter']],
+        ...query,
+        raw: true,
+      });
+      resolve(chapters);
+    } catch (err) {
+      err.code = 500;
+      err.msg = "Query error"
+      reject(err);
+    }
+  })
+
   Chapter.getAll = (attributes = [], query = {}, ...options) => 
   new Promise( async (resolve, reject) => {
     try {

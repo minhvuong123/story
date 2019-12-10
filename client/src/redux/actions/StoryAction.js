@@ -4,7 +4,15 @@ export const GET_STORY = "GET_STORY";
 export const GET_CHAPTERS = "GET_CHAPTERS";
 export const GET_CATEGORIES = "GET_CATEGORIES";
 export const GET_STORY_CATEGORIES = "GET_STORY_CATEGORIES";
+export const GET_PLAY_LIST = "GET_PLAY_LIST";
 
+
+export const getPlayList = (stories) => {
+  return {
+    type: GET_PLAY_LIST,
+    stories
+  }
+}
 
 export const  getStoryCategories = (stories) => {
   return {
